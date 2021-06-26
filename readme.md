@@ -14,6 +14,7 @@ MiBikeShop.com está fundado por:
 
 Enrique Kloosterman:
 
-Pedro M. Rodriguez
+Pedro M. Rodriguez: tiene 35 años y vive en Adrogué provincia de Buenos Aires.
+Trabajó en el rubro salud hace 10 años y más allá de haber realizado dos cursos de HTML y CSS esta es su primera experiencia programando.
 
-Andres M Prieto: tiene 26 años, y es estudiante de economía. Actualmente se desempeña como programador. Vive en Argentina, Buenos Aires. 
+Andres M Prieto: tiene 26 años, y es estudiante de economía. Actualmente se desempeña como programador. Vive en Argentina, Buenos Aires. Se desempeñó durante mas de 6 años en las areas administrativas y financieras en empresas como Lenovo y ViacomCBS, incorporando muchos conocimientos organizacionales en el camino. 
