@@ -22,7 +22,7 @@ Andres M Prieto: tiene 26 años, y es estudiante de economía. Actualmente se de
 
 REFERENCIAS:
 
-https://www.cannondale.com/es-la
-https://www.newbornriders.com/ 
-https://www.ridebmc.com.ar/ruta
-https://bicistore.com.ar/
+https://www.cannondale.com/es-la  ---
+https://www.newbornriders.com/    ---
+https://www.ridebmc.com.ar/ruta   ---
+https://bicistore.com.ar/   ---
