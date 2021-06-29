@@ -12,7 +12,8 @@ adultos van a poder encontrar en MiBikeShop.com, una bicicleta que cumpla con su
 
 MiBikeShop.com está fundado por:
 
-Enrique Kloosterman:
+Enrique Kloosterman: tiene 43 años. Actualmente vive en Benito Juarez provincia de Buenos Aires.
+Hizo las carreras de publicidad y produccion audiovisual. Actualmente se desempeña como traductor.
 
 Pedro M. Rodriguez: tiene 35 años y vive en Adrogué provincia de Buenos Aires.
 Trabajó en el rubro salud hace 10 años y más allá de haber realizado dos cursos de HTML y CSS esta es su primera experiencia programando.
