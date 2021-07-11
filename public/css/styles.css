@@ -1,0 +1,21 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Roboto', 'sans-serif';
+    background-color: #e0e0e0
+}
+
+nav.secciones {
+    display: none;
+    
+}
+
+section.banner img{
+    width: 100%;
+
+}
