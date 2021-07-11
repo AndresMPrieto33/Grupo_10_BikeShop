@@ -9,6 +9,21 @@ body {
     font-family: 'Roboto', 'sans-serif';
     background-color: #e0e0e0
 }
+.top-header{
+    display: flex;
+    justify-content: flex-end;    
+}
+.top-header .login{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.login ul {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
 
 nav.secciones {
     display: none;
@@ -17,5 +32,22 @@ nav.secciones {
 
 section.banner img{
     width: 100%;
+    margin-bottom: 20px;
+}
 
+.display-menu{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.burguer-menu{
+    display: flex;
+    width: 35px;
+    height: 35px;
+    background-color: blue;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
 }
