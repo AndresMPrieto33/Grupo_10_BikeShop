@@ -13,16 +13,62 @@ body {
     display: flex;
     justify-content: flex-end;    
 }
+.top-header nav{
+    width: 35%;
+    margin-right: 5px;  
+}
+.top-header nav ul{
+    list-style: none;   
+}
 .top-header .login{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     
 }
+.mid-header{
+    display: flex;
+    text-align: center;
+}
+.mid-header .logo{
+    width: 60%;
+}
+.mid-header .logo img{
+    width: 90%;
+}
+
+header .form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .form .input {
+    width: 60%;
+    height: 20px;
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+    font-size: 9px
+}
+
+header .form .submit {
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: #666;
+    width: 15%;
+}
+
+header div.mid-header p {
+    width: 100%;
+    padding-right: 5px;
+    margin-top: 10px;
+}
 
 nav.secciones {
     display: none;
-    
 }
 
 section.banner img{
