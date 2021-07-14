@@ -11,7 +11,12 @@ body {
 }
 .top-header{
     display: flex;
-    justify-content: flex-end;    
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.top-header i{
+    color: rgb(45, 45, 124);
+    font-size: 1.4em;
 }
 .top-header nav{
     width: 35%;
@@ -86,7 +91,7 @@ section.banner img{
     display: flex;
     width: 35px;
     height: 35px;
-    background-color: blue;
+    background-color: rgb(45, 45, 124);
     color: white;
     justify-content: center;
     align-items: center;
