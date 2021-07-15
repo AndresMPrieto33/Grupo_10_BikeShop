@@ -97,3 +97,26 @@ section.banner img{
     align-items: center;
     border-radius: 5px;
 }
+
+/*ESTILOS MAIN*/
+
+main h2{
+    text-align: center;
+    margin-bottom: 15px;
+}
+main .productos-novedades{
+    display: flex;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.novedades1 img, .novedades2 img, .novedades3 img{
+    width: 90%;
+}
+main .productos-destacados{
+    display: flex;
+    text-align: center;
+    margin-bottom: 30px;
+    }
+.destacados1 img, .destacados2 img, .destacados3 img{
+     width: 90%;
+}
