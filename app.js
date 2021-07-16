@@ -11,3 +11,19 @@ app.get('/', (req, res)=> {
 
 app.listen (3000, () => console.log ('Servidor 3000 corriendo')
 );
+
+app.get('/login', (req,res)=>{
+    res.sendFile(__dirname + '/views/login.html');
+});
+
+app.get('/registro', (req,res)=>{
+    res.sendFile(__dirname + '/views/registro.html');
+});
+
+app.get('/Carrito', (req,res)=>{
+    res.sendFile(__dirname + '/views/Carrito.html');
+});
+
+app.get('/detalle', (req,res)=>{
+    res.sendFile(__dirname + '/views/detalle.html');
+});
