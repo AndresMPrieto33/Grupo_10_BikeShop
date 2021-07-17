@@ -118,6 +118,7 @@ main .productos-destacados{
     margin-bottom: 30px;
     }
 .destacados1 img, .destacados2 img, .destacados3 img{
+<<<<<<< HEAD
      width: 90%;
 }
 
@@ -154,3 +155,44 @@ footer .copyrigth{
     height: 30px;
     margin: auto;
 }
+=======
+    width: 90%;
+}
+
+/*    #### ESTILOS FORMULARIOS #### */
+
+.register{
+    background-color: #c2c0c0;
+    width: 80%;    
+    border: solid 1px #000;
+    border-radius: 10PX;    
+    padding: 20px 0;
+    margin: auto;
+    text-align: center;
+}
+.register .personal-info input,
+.register .password input{
+    margin: 5px 0;
+    padding: 3px;
+    width: 80%;
+    border-radius: 4px;
+}
+.register .caracteristicas{
+    /* display: flex;
+    flex-wrap: wrap; */
+    padding-left: 10%;
+    text-align: left;
+}
+.register h4{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.register .botones input{
+    padding: 5px;
+    background-color: rgb(45, 45, 124);
+    color: white;
+    border-radius: 4px;
+    border: none;
+}
+>>>>>>> db7f68811cdbfbf61ffa9ff3c62f3557577d2c69
