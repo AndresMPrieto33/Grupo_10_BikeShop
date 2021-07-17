@@ -120,3 +120,37 @@ main .productos-destacados{
 .destacados1 img, .destacados2 img, .destacados3 img{
      width: 90%;
 }
+
+/*ESTILOS FOOTER*/
+footer{
+    padding-top: 15px;
+    background-color: #C2C0C0;
+}
+footer .info{
+    width: 90%;
+    margin: auto;
+}
+footer .info p{
+    margin-top: 10px;
+}
+footer .seguinos{
+    width: 90%;
+    height: 80px;
+    margin: auto;
+}
+footer .seguinos h3{
+    margin-top: 15px;
+}
+footer .seguinos div.logos-redes ul{
+    font-size: 1.7rem;
+    padding: 0 0 34px;
+    text-align: center;
+}
+footer .seguinos div.logos-redes li{
+    display: inline;
+}
+footer .copyrigth{
+    width: 90%;
+    height: 30px;
+    margin: auto;
+}
