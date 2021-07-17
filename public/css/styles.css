@@ -118,7 +118,6 @@ main .productos-destacados{
     margin-bottom: 30px;
     }
 .destacados1 img, .destacados2 img, .destacados3 img{
-<<<<<<< HEAD
      width: 90%;
 }
 
@@ -155,9 +154,7 @@ footer .copyrigth{
     height: 30px;
     margin: auto;
 }
-=======
-    width: 90%;
-}
+   
 
 /*    #### ESTILOS FORMULARIOS #### */
 
@@ -195,4 +192,3 @@ footer .copyrigth{
     border-radius: 4px;
     border: none;
 }
->>>>>>> db7f68811cdbfbf61ffa9ff3c62f3557577d2c69
