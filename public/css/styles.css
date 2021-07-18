@@ -16,8 +16,14 @@ body {
     
 }
 .top-header i{
+    width: 25px;
+    height: 25px;
     color: rgb(45, 45, 124);
     font-size: 1.2em;
+    
+    
+    text-align: center;
+    
 }
 .top-header nav{
     width: 100%;
@@ -26,12 +32,13 @@ body {
 }
 .top-header nav ul{
     list-style: none;
-    margin-right: 15px;
+    margin-right: 2px;
     
 }
 .top-header nav ul li{
     padding-left: 5px;
-    padding-right: 5px;    
+    padding-right: 5px;
+    
 }
 .top-header nav ul li a{
     text-decoration: none;
@@ -47,20 +54,22 @@ body {
 }
 .mid-header{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     text-align: center;
 }
 .mid-header .logo{
-    width: 90%;
+    width: 100%;
     flex-grow: 0.4;
+    padding: 10px;
 }
 .mid-header .logo img{
-    width: 90%;
+    width: 100%;
 }
 .mid-header p a{
     text-decoration: none;
     color: #000;
     font-size: 14px;
+    display: none;
     
 }
 .mid-header p{
@@ -72,6 +81,7 @@ body {
 
 .mid-header i{
     color: rgb(45, 45, 124);
+    
 }
 
 header .form{
@@ -80,9 +90,10 @@ header .form{
     flex-grow: 0.35;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 header .form .input {
-    width: 60%;
+    width: 100%;
     height: 20px;
     background-color: #FFF;
     border: 1px solid #000;
@@ -100,9 +111,8 @@ header .form .submit {
 }
 
 header div.mid-header p {
-    width: 100%;
-    padding-right: 5px;
-    
+    width: 15%;
+    padding-right: 10px;    
 }
 header .mid-header .submit i{
     font-size: 0.8em;
