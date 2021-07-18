@@ -29,7 +29,11 @@ body {
 }
 .top-header nav ul li{
     padding-left: 5px;
-    padding-right: 5px;
+    padding-right: 5px;    
+}
+.top-header nav ul li a{
+    text-decoration: none;
+    color: #000;
 }
 .top-header .login{
     display: flex;
@@ -47,6 +51,13 @@ body {
 }
 .mid-header .logo img{
     width: 90%;
+}
+.mid-header p a{
+    text-decoration: none;
+    color: #000;
+}
+.mid-header i{
+    color: rgb(45, 45, 124);
 }
 
 header .form{
