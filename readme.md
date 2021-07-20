@@ -27,3 +27,6 @@ https://www.cannondale.com/es-la  ---
 https://www.newbornriders.com/    ---
 https://www.ridebmc.com.ar/ruta   ---
 https://bicistore.com.ar/   ---
+
+Trello:
+https://trello.com/b/w2zHJ85j/proyecto-integrador
