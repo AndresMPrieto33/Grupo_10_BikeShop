@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e0e0e0;
+    font-family: 'Roboto', 'sans-serif';
+
+}
+
+.profile{
+    text-align: right;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+}
+.profile i{
+    font-size: 1.4em;
+    color: rgb(45, 45, 124);
+    
+    
+}
+.logo{
+    align-items: center;
+    display: flex;
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+}
+.logo img{
+    width: 100%;
+    justify-content: center;
+}
+
+.container{
+    border: solid 1px black;
+    width: 90%;
+    margin: auto;
+    margin-top: 5%;
+    /* padding: 5%; */
+    background-color: #c2c0c0;
+
+}
+
+.campo {
+    width: 100%;
+    background-color: #c2c0c0;    
+    padding: 2%;
+    margin: auto;
+    /* border: solid 1px red; */
+    
+}
+.tag{
+    background-color: #fff;
+    padding: 2%;
+    width: 100%;
+    border: solid 1px #000;
+    border-bottom: none;
+    border-radius: 4px;
+    text-align: center;
+    
+}
+.container .campo textarea{
+    width: 100%;
+    margin-top: 0;
+    border-radius: 4px;
+    border: solid 1px #000;
+    border-radius: 4px;
+}
+.container  input {
+    width: 100%;
+    padding:3%;
+    border: solid 1px #000;
+    border-radius: 4px;
+    
+}
+.container .campo .desciption{
+    background-color: #fff;
+}
+.botones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.botones input{
+    padding: 10px 5px;
+    background-color: rgb(45, 45, 124);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    width: 30%;
+    margin: 10px 0;
+    max-width: 130px;
+}
