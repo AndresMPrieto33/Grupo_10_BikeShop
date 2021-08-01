@@ -610,6 +610,24 @@ main.carrito{
     }
 }
 
+@media (min-width: 1280px){
+    /*CSSS NAV SECCIONES*/
+    nav.secciones{
+        height: 60px;
+    }
+    nav.secciones ul li{
+        height: 45px;
+        padding: 12px;
+    }
+
+    main h2{
+        font-size: 38px;
+        margin: 15px;
+    }
+
+    /*CSS NOVEDADES*/
+    
+}
 
 
 
