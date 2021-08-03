@@ -1,61 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
 
-    <meta charset='UTF-8'>
-    <title>MiBikeShop.com</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
+        <!-- ## head ##-->
+        <%- include('partial/head') %> 
+        <!-- ## head ##-->
 
-    </head>
     <body>
-        <header> 
-            <div class="top-header">                
-                <nav>
-                    <ul class="login">
-                        <li></i><a href="/registro">Registrarse</a></li>
-                        <li><a href="/login">Ingresá</a></li>
-                        <i class="fas fa-portrait"></i>      
-                    </ul>
-                </nav>
-            </div>
-            <div class="mid-header">
-                <div class="logo">
-                    <a href="/"><img src="/images/bikeShop_002.png" alt= "Logo de MiBikeShop"></a>
-                </div>
-                    <div class="form" action="#" method="GET">
-                        <div class="input"> ¿Qué estas buscando?</div>
-                        <div class="submit"> <i class="fa fa-search"></i>
-                        </div>
-                    </div>
-                    <div class="carrito"><a href="/Carrito"><i class="fas fa-shopping-cart"></i><p>Carrito de compras</p></a></div>
-            </div>
-        <section class="banner"> 
-            <img src="/images/001f.jpg" alt="Banner de ofertas">
-        </section>
-        <div class="display-menu">
-            <div class="burguer-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-
-        <nav class="secciones">
-            <ul>
-                <li><a href="#">Bicicletas</a></li>
-                <li><a href="#">Accesorios</a></li>
-                <li><a href="#">Componentes</a></li>
-                <li><a href="#">Mecánica</a></li>
-                <li><a href="#">Indumentaria</a></li>
-                <li><a href="#">Ruedas</a></li>
-                <li><a href="#">Ofertas</a></li>
-            </ul>           
-        </nav>
-
-        </header>
+        <!--## header ##  -->
+        <%- include('partial/header') %>
+        <!-- ## header ## -->
 
         <main class="register">
             <form action="/" method="POST">
@@ -117,29 +70,10 @@
                 </div>
             </form>
         </main>
-        <footer>
-            <section>
-                <div class="info">                
-                    <h3>Informacion</h3>
-                    <p>Somos una de las plataformas de venta online de bicicletas mas importantes de Argentina.
-                    </p>
-                    <p>Nos especializamos en la venta de bicicletas, componentes, accesorios y los principales productos relacionados con el mundo del ciclismo.</p>
-                </div>
-                <div class="seguinos">
-                    <h3>Seguinos</h3> 
-                    <div class="logos-redes">
-                        <ul>
-                            <li><i class="fab fa-instagram"></i></li>
-                            <li><i class="fab fa-facebook-square"></i></li>
-                            <li><i class="fab fa-youtube"></i></li>
-                        </ul>           
-                    </div>
-                </div>
-            </section>
-            <div class="copyrigth">
-                <p>Copyright @ 2021 MiBikeShop.com <i class="fas fa-bicycle"></i></p></i>
-            </div>
-        </footer>
+        <!-- ## footer## -->
+        <%- include('partial/footer') %>
+        <!-- ## footer## -->
+</html>
 
     </body>
 </html>
