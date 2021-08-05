@@ -21,3 +21,13 @@ Lo que se hizo mal: El manejo del tiempo no fue 100% organizado. Si bien llegamo
 Qué se debe empezar a hacer: Estar más al día con las prácticas y las clases. 
 
 Qué se debe dejar de hacer: No tener definido un horarios de finalizacion de las meetings.
+
+Retrospectiva del equipo. Parte 3. Sprint 4
+
+Lo que se hizo bien: Hubo un muy buen manejo del tiempo, en ningun momento estuvimos exigidos con las consignas.
+
+Lo que se hizo mal: Nuevamente estamos desactualizados con las explicaciones y genera algunas lagunas en el proceso.
+
+Qué se debe empezar a hacer: Se debe mantener el trello al día, para llevar una mayor organizacion de los pasos a seguir en cada sprint.
+
+Qué se debe dejar de hacer: Se debe dejar de estar desactualizados con las clases y las ejercitaciones del playground.
