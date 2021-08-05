@@ -626,7 +626,51 @@ main.carrito{
     }
 
     /*CSS NOVEDADES*/
-    
+    main .nov{
+        display: flex;
+    /* flex-wrap: nowrap; */
+        align-items: center;
+        justify-content: space-around;
+    }
+    main .productos-novedades{
+        width: 32%;
+    }
+    main .novedades{
+        width: 100%;
+    }
+    main .novedades img{
+        width: 100%;
+        height: 260px;
+    }
+    main .detalle{
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    main .des{
+        display: flex;
+    /* flex-wrap: nowrap; */
+        align-items: center;
+        justify-content: space-around;
+    }
+    main .productos-destacados{
+        width: 32%;
+    }
+    main .destacados{
+        width: 100%;
+    }
+    main .destacados img{
+        width: 100%;
+        height: 260px;
+    }
+    main .detalle{
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
 }
 
 
