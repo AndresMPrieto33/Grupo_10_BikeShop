@@ -1,0 +1,213 @@
+[
+    {
+        "id": 1,
+        "name": "Venzo THORN EVO",
+        "price": 82000,
+        "discount": 10,
+        "category": "sale",
+        "type": "bicicletas",
+        "description": " 24 velocidades (3x8) Shimano ALTUS. Cuadro de Aluminio 6061. Cubiertas Chaoyang/Kenda. Frenos a disco hidráulicos delanteros y traseros Shimano. Ruedas de aluminio, reforzadas y doble pared Venzo. Horquilla RST GILA / SR SUNTOUR XCT con bloqueo y regulación. Piñón a cassette.",
+        "image": "venzo-THORN-EVO-24V.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Venzo STINGER",
+        "price":70000 ,
+        "discount": 0,
+        "category":"new" ,
+        "type": "bicicletas" ,
+        "description": " Equipamiento VENZO y SHIMANO originales. Frenos a DISCOS HIDRAULICOS SHIMANO. Shimano Deore M6000 2x10V. Suspensión con bloqueo RST Gila. Aluminio 6061. Rodado 29. Llantas dobles pared marca Venzo con masas a rulemanes. Cubiertas MAXXIS PACE ",
+        "image": "venzo-stinger-2x10v.png" 
+    },
+    {
+        "id": 3,
+        "name": "Venzo Cube BMX",
+        "price": 39000,
+        "discount": 0,
+        "category": "uncategorized ",
+        "type": "bicicletas",
+        "description":"Asiento Velo BMX freestyle. Frenos V-Brake. Llanta 48 rayos reforzada Forma freestyle. Engranaje freestyle compact disc. Pedales freestyle acrílico Neco. Cubierta freestyle 20x2,0. Rodado 20",
+        "image": "venzo-cube-bmx.png" 
+    },
+    {
+        "id": 4,
+        "name": "Venzo SKYLINE EVO 21v",
+        "price": 63200 ,
+        "discount": 7,
+        "category": "sale",
+        "type": "bicicletas",
+        "description": "21 velocidades Shimano TOURNEY. Cuadro de aluminio 6061. Frenos a disco mecánico. Rodado 29. Cubiertas Chaoyang. Ruedas reforzadas, doble pared de aluminio, Venzo, con mazas a rulemanes.",
+        "image": "venzo-skyline-evo-21v.png"
+    },
+    {
+        "id": 5,
+        "name": "Venzo PRIMAL XC Shadow 21v",
+        "price": 82000,
+        "discount": 0,
+        "category": "uncategorized ",
+        "type": "bicicletas",
+        "description": "24 velocidades (3x8) Shimano ALTUS. Cuadro de Aluminio 6061. Cubiertas Chaoyang/Kenda (según envío de fábrica). Frenos a disco hidráulicos delanteros y traseros Shimano. Ruedas de aluminio, reforzadas y doble pared Venzo. Horquilla RST GILA / SR SUNTOUR XCT (según envío de fábrica) con bloqueo y regulación.",
+        "image": "venzo-primal-xc-shadow-21v.jpeg" 
+    },
+    {
+        "id": 6,
+        "name": "Venzo LOKI EVO Shadow 21v",
+        "price": 52500,
+        "discount": 0,
+        "category": "uncategorized ",
+        "type": "bicicletas",
+        "description": "21 Velocidades SHIMANO SIS. Cuadro Aluminio 6061. Frenos A Disco Mecánicos. Rodado 29. Cubiertas Chaoyang. Ruedas Reforzadas Doble Pared Aluminio Venzo con masas a rulemanes.",
+        "image": "venzo-loki-evo-shadow.png" 
+    },
+    {
+        "id": 7,
+        "name": "Venzo TRAVELER 700",
+        "price": 93500,
+        "discount": 10,
+        "category": "sale",
+        "type": "bicicletas",
+        "description": "27 velocidades (3x9). Pata de cambio: Shimano Acera Shadow Descarrilador: Shimano Altus Shadow. Cuadro de Aluminio 6061. Cubiertas Chaoyang Frenos a disco mecánicos delanteros y traseros Shimano Tourney. Ruedas de aluminio, reforzadas y doble pared Venzo. Horquilla rígida Venzo Traveler. Piñón a cassette. Parrilla delantera y trasera",
+        "image":"venzo-traveler-700.png" 
+    },
+    {
+        "id": 8,
+        "name": "Horquilla Venzo X BLAZE EVO r29",
+        "price": 53000,
+        "discount": 10,
+        "category": "sale",
+        "type": "partes",
+        "description": "Rodado 29. Frente cónico. Eje 9mm. Rígida. Material: fibra de carbono. 3K Peso: 580g",
+        "image":"horquilla-venzo-x-blaze-evo.png"
+    },
+    {
+        "id": 9,
+        "name": "Portabicicletas Venzo Reforzado Plegable P/3 Bicicletas",
+        "price": 16000,
+        "discount": 0,
+        "category": "new",
+        "type": "accesorios",
+        "description": "Estructura de caño metálico. Cierre con seguro para el amarre de las bicis con grampas rígidas y tensor. Correas de sujeción con trabas. Peso: 3.9 kg. Capacidad Maxima: 45kg. Regulacion de angulo de los brazos. Gomas para el apoyo al auto.  No compatible con autos con aleron de plastico. Capacidad maxima 3 bicicletas.",
+        "image": "portabicicletas-venzo-reforzado.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Horquilla Venzo VMT Plus R29",
+        "price": 7600,
+        "discount": 0,
+        "category": "uncategorized ",
+        "type": "partes",
+        "description": "Horquilla rígida. Poste cónico. Rodado 29. Material: aluminio. Peso: 1155g.",
+        "image": "horquila-venzo-vmt-plus-r29.jpeg"
+    },
+    {
+        "id": 11,
+        "name": "Asiento De Gel Antiprostatico Firebird",
+        "price": 2500,
+        "discount": 0,
+        "category": "new",
+        "type": "partes",
+        "description": " ",
+        "image": "asiento-de-gel-antiprostatico-firebird.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Asiento Fabric Line Elite Shallow",
+        "price": 10000,
+        "discount": 0,
+        "category": "uncategorized ",
+        "type": "partes",
+        "description": "Rieles: Cro-mo (7 mm). Base: nailon flexible.Funda: microfibra. Perfil: poco profundo. Peso: 242g. Ancho: 142 mm. Longitud: 282 mm. Riel intermedio a la parte superior de la silla de montar 49 mm.",
+        "image": "asiento-fabric-line-elite.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Asiento Fizik MTB Tundra M5",
+        "price": 21900,
+        "discount": 7,
+        "category": "sale",
+        "type": "partes",
+        "description": "Carcasa: Nylon reforzado con carbono. Rieles WingFlex : S-Alloy. Carcasa: Microtex Nero Carcasa. Lateral: Antracite Printed Microtex Carcasa. Trasera: Cordura negra Acolchado. Baja densidad con canal de alivio de presión. Compatible con el sistema de clip integrado Peso: 235 g. Dimensiones: 287x126 mm",
+        "image": "asiento-fizik-line-mtb-tundra-m5.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Pedales BBB Road Dynamic",
+        "price": 9600,
+        "discount": 0,
+        "category": "new",
+        "type": "partes",
+        "description": "Uso: Ruta. Fuerza de liberación ajustable (te permite personalizar y ajustar los pedales). 9 ° libertad de movimiento lateral para proteger las articulaciones de la rodilla. Eje CrMo mecanizado CNC. Geometría única para fácil entrada y salida. Rodamiento a rulemanes. Pedales de clic compatibles. Incluye calas RoadClip BPD-02A rojas floted. Peso: 322 g.",
+        "image": "pedales.bbb-road-dynamic.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Pedales Cannondale 6 Point 3",
+        "price": 6700,
+        "discount": 0,
+        "category": "uncategorized ",
+        "type": "partes",
+        "description": "Fabricada en aluminio de alta calidad. Ideal para bicicletas mtb, fixie, urbanas. ultra resistentes. Diseño exclusivo de cannondale. Rosca: 9/16. Rodamientos de rulemanes. Incluye reflectores amarillos para mayor seguridad. Color: negro",
+        "image": "pedale-cannodale-6-point.jpg"
+    },
+    {
+        "id": 16,
+        "name": "Pedales Shimano M520 SPD",
+        "price": 8200,
+        "discount": 10,
+        "category": "sale",
+        "type": "partes",
+        "description": "Su peso es de 380 gramos el par de pedales. Diseño de cuerpo compacto con anclaje abierto para un anclaje fácil.  Mejor repelencia del barro y la suciedad que cualquier otro pedal de su clase. Tensión de anclaje y liberación ajustable. Eje en aleación de cromoly y eje de cartucho de rodamientos sellados de bajo mantenimiento",
+        "image":"Pedales-Shimano-M520-SPD.jpg"
+    },
+    {
+        "id": 17,
+        "name": "CUBIERTA MAXXIS ASPEN 29X2.25 TR EXO",
+        "price": 11000,
+        "discount": 20,
+        "category": "sale",
+        "type": "ruedas",
+        "description": "Marca: Maxxis. Modelo: Aspen TR Exo Protection. Rodado: 29x2.25. Tipo: Tubeless Ready. Aro: de Kevlar (plegables/folding). Versión reforzada Exo Protection. Goma/Shore: 62a/60a. Tpi: 120 tpi. Inspirada en las carreras. Tacos laterales agresivos. Compuesto dual (Dual compound). Cubierta de XC liviana. Terreno: Duro, compacto, Mixto: tierra, piedras, raíces. Condiciones:Todo. ETRTO: 52-622. Peso: 646g",
+        "image": "CUBIERTA-MAXXIS-ASPEN-29X2.25-TR-EXO.jpg"
+    },
+    {
+        "id": 18,
+        "name": "Cubierta Maxxis Grifter SilkShield 20x2,40 Kevlar",
+        "price": 8100,
+        "discount": 0,
+        "category": "uncategorized ",
+        "type": "ruedas",
+        "description": "20x2.40. ETRTO: 61-406. TPI: 60. Peso: 605 g. Compuesto: Doble. PSI máximo: 110. Color: Negro. Tecnología: SilkShield",
+        "image":"Cubierta-Maxxis-Grifter-SilkShield-20x2.40Kevlar.png"
+    },
+    {
+        "id": 19,
+        "name": "Soporte De Pared Bicicleta Hornit Clug",
+        "price": 3200,
+        "discount": 15,
+        "category": "sale",
+        "type": "accesorios",
+        "description": "Listo P/ Amurar. 3 Medidas Para Ruedas de Ruta, Híbrida o MTB. Ruta = 23 - 32mm (1 - 1.25) De 6 a 13Kg. Híbrida = 33 - 42mm (1.3 - 1.75) De 8 a 20Kg. MTB = 43 - 62mm (1.8 - 2.5) De 8 a 20Kg.  Con Tornillos y Tarugos. Consultar Disponibilidad de Modelo Antes de Ofertar",
+        "image": "Soporte-De-Pared-Bicicleta-Hornit-Clug.jpg"
+    },
+    {
+        "id": 20,
+        "name": "Linterna USB - Van Halen",
+        "price": 2500 ,
+        "discount": 0,
+        "category": "uncategorized ",
+        "type": "accesorios",
+        "description": "Luz led blanca de alta potencia de 3 Watt. 350 lumenes. Recargable por USB. Carga rápida. Resistente al agua. Indicador de batería baja. Protector de batería. 4 modos (super brillo / potenciada / constante / parpadeante). Tamaño: 61,5x27x27mm. Peso: 50g.",
+        "image":"Linterna-USB-Van-Halen.jpg"
+    },
+    {
+        "id": 21 ,
+        "name": "Luz delantera y trasera RAVEMEN LS-CT02",
+        "price": 8200,
+        "discount": 0,
+        "category": "uncategorized",
+        "type": "accesorios",
+        "description": " ",
+        "image": "Luz-delantera-y-trasera-RAVEMEN-LS-CT02.png"
+    }
+
+]
