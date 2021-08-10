@@ -47,7 +47,7 @@
         "category": "uncategorized ",
         "type": "bicicletas",
         "description": "24 velocidades (3x8) Shimano ALTUS. Cuadro de Aluminio 6061. Cubiertas Chaoyang/Kenda (según envío de fábrica). Frenos a disco hidráulicos delanteros y traseros Shimano. Ruedas de aluminio, reforzadas y doble pared Venzo. Horquilla RST GILA / SR SUNTOUR XCT (según envío de fábrica) con bloqueo y regulación.",
-        "image": "venzo-primal-xc-shadow-21v.jpeg" 
+        "image": "venzo-pirmal-xc-shadow-24v.jpeg" 
     },
     {
         "id": 6,
@@ -97,7 +97,7 @@
         "category": "uncategorized ",
         "type": "partes",
         "description": "Horquilla rígida. Poste cónico. Rodado 29. Material: aluminio. Peso: 1155g.",
-        "image": "horquila-venzo-vmt-plus-r29.jpeg"
+        "image": "horquilla-venzo-vmt-plus-r29.jpeg"
     },
     {
         "id": 11,
@@ -127,7 +127,7 @@
         "category": "sale",
         "type": "partes",
         "description": "Carcasa: Nylon reforzado con carbono. Rieles WingFlex : S-Alloy. Carcasa: Microtex Nero Carcasa. Lateral: Antracite Printed Microtex Carcasa. Trasera: Cordura negra Acolchado. Baja densidad con canal de alivio de presión. Compatible con el sistema de clip integrado Peso: 235 g. Dimensiones: 287x126 mm",
-        "image": "asiento-fizik-line-mtb-tundra-m5.jpg"
+        "image": "asiento-fizik-mtb-tundra-m5.jpg"
     },
     {
         "id": 14,
@@ -137,7 +137,7 @@
         "category": "new",
         "type": "partes",
         "description": "Uso: Ruta. Fuerza de liberación ajustable (te permite personalizar y ajustar los pedales). 9 ° libertad de movimiento lateral para proteger las articulaciones de la rodilla. Eje CrMo mecanizado CNC. Geometría única para fácil entrada y salida. Rodamiento a rulemanes. Pedales de clic compatibles. Incluye calas RoadClip BPD-02A rojas floted. Peso: 322 g.",
-        "image": "pedales.bbb-road-dynamic.jpg"
+        "image": "pedales-bbb-road-dynamic.jpg"
     },
     {
         "id": 15,
@@ -147,7 +147,7 @@
         "category": "uncategorized ",
         "type": "partes",
         "description": "Fabricada en aluminio de alta calidad. Ideal para bicicletas mtb, fixie, urbanas. ultra resistentes. Diseño exclusivo de cannondale. Rosca: 9/16. Rodamientos de rulemanes. Incluye reflectores amarillos para mayor seguridad. Color: negro",
-        "image": "pedale-cannodale-6-point.jpg"
+        "image": "pedales-cannodale-6-point.jpg"
     },
     {
         "id": 16,
@@ -177,7 +177,7 @@
         "category": "uncategorized ",
         "type": "ruedas",
         "description": "20x2.40. ETRTO: 61-406. TPI: 60. Peso: 605 g. Compuesto: Doble. PSI máximo: 110. Color: Negro. Tecnología: SilkShield",
-        "image":"Cubierta-Maxxis-Grifter-SilkShield-20x2.40Kevlar.png"
+        "image":"Cubierta-Maxxis-Grifter-SilkShield-20x2.40-Kevlar.png"
     },
     {
         "id": 19,
@@ -197,7 +197,7 @@
         "category": "uncategorized ",
         "type": "accesorios",
         "description": "Luz led blanca de alta potencia de 3 Watt. 350 lumenes. Recargable por USB. Carga rápida. Resistente al agua. Indicador de batería baja. Protector de batería. 4 modos (super brillo / potenciada / constante / parpadeante). Tamaño: 61,5x27x27mm. Peso: 50g.",
-        "image":"Linterna-USB-Van-Halen.jpg"
+        "image":"Linterna-USB -Van-Halen.jpg"
     },
     {
         "id": 21 ,

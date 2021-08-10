@@ -1,7 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <%- include('../partial/head') %>
-<body>
-    <%- include('../partial/header') %>
+        <!-- ## head ## -->
+        <%- include('../partial/head') %>
+        <!-- ## head ## -->
+    <body>
+        <!-- ## header ## -->
+        <%- include('../partial/header') %>
+        <!-- ## header ## -->
+
+        <% for( let i = 0; i < products.length; i++ ) { %>            
+            <div class="prductsAll">
+                <section class="productos-novedades">
+                    <div class="novedades">
+                        <a href="/detalle"><img src="images/products/<%= products[i].image %>" alt="Imagen Bicicleta"></a>
+                        <div class="detalle">
+                            <div class="description"><h4><%= products[i].name %></h4></div>
+                            <div class="precio"><p><%= products[i].price %></p></div>
+                            <a href="/Carrito"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                </section>           
+            </div>
+        <% } %>
+
+        <!-- ## footer## -->
+        <%- include('../partial/footer') %>
+        <!-- ## footer## -->
     </body>
 </html>

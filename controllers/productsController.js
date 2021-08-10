@@ -1,12 +1,12 @@
 const path = require('path');
 const fs = require('fs');
 const productsFilePath = path.join(__dirname, '../data/productsDB.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const productsController ={
     products: (req, res) => {
-        res.render('products/productsAll');
+        res.render('products/productsAll', {products: products});
     },
     detalle: (req, res) => {
         res.render('detalle');
