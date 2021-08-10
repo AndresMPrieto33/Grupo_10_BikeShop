@@ -6,7 +6,7 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productsController ={
     products: (req, res) => {
-        res.render('productsAll');
+        res.render('products/productsAll');
     },
     detalle: (req, res) => {
         res.render('detalle');
