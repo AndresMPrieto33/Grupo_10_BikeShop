@@ -671,6 +671,23 @@ main.carrito{
         flex-wrap: nowrap;
         flex-direction: column;
     }
+
+    /* ESTILOS DETALLE DE PRODUCTO */
+
+.detalle-producto article{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.detalle-producto article img{
+    width: 75%;
+    }
+.detalle-producto .contenedor{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 10px;
+    }
 }
 
 
