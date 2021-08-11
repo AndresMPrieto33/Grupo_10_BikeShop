@@ -24,46 +24,48 @@
     
 
     <div class="container">
-        <form action="/" method="post">
+        <form action="/products/store" method="POST">
             <div class="campo">
                 <div class="tag">
-                    <p>Nombre del producto</p>
+                    <label for="name" class="form-label">Nombre del producto:</label>
+						<input type="text" id="name" name="name" placeholder="Ej: Bicicleta Venzo" class="form-input">
                 </div>
-                <div class="description">
-                    <input type="text texto">
-                </div>
+                
             </div>
             <div class="campo">
                 <div class="tag">
-                    <p>Description</p>                    
+                    <label for="name" class="form-label">Descripcion del producto:</label>
+						<input type="text" id="name" name="description" placeholder="Ej: Bicicleta Venzo" class="form-input">                    
                 </div>
-                <div class="description">
-                    <textarea name="desripcion" id="" cols="30" rows="5"></textarea>
-                </div>
+                
             </div>
             <div class="campo">
                 <div class="tag">
-                    <p>Categoria</p>
+                    <label for="name" class="form-label">Precio:</label>
+						<input type="text" id="name" name="price" placeholder="Ej: Bicicleta Venzo" class="form-input">
                 </div>
-                <div class="description">
-                    <input type="text texto">
-                </div>
+                
             </div>
             <div class="campo">
                 <div class="tag">
-                    <p>Precio</p>
+                    <label for="name" class="form-label">Descuento:</label>
+						<input type="text" id="name" name="discount" placeholder="Ej: Bicicleta Venzo" class="form-input">
                 </div>
-                <div class="description">
-                    <input type="text texto">
-                </div>
+                
             </div>
             <div class="campo">
                 <div class="tag">
-                    <p>Imagen del producto</p>
+                    <label for="description" class="form-label">Imagenes:</label>
+						<input name="image" id="images" class="form-input" type="file">
+
                 </div>
-                <div class="description">
-                    <input type="file" name="producto">
-                </div>
+            </div>
+            <div>
+                <label for="category" class="form-label">Categoría:</label>
+						<select name="category" id="category" class="form-input">
+							<option value="">Elegí</option>
+							<option value="in-sale">Bicicletas</option>
+							<option value="visited">Otros</option>
             </div>
             <div class="botones">                    
                 <input type="submit" value="Confirmar" class="submit">

@@ -13,6 +13,26 @@ const productsController ={
     },
     carrito: (req, res) => {
         res.render('carrito');
+    },
+    nuevo: (req, res) => {
+		// Do the magic
+		res.render('../views/products/admin');
+	},
+    store: (req, res) => {
+        let nuevoId = products[products.length - 1].id + 1;
+		let id = nuevoId;
+		let nuevoProducto = {
+			name: req.body.name,
+			price: req.body.price,
+			category: req.body.category,
+			discount: req.body.discount,
+			id: nuevoId
+		//	image: req.file.originalname
+		}
+
+		products.push(nuevoProducto);
+		fs.writeFileSync(productsFilePath, JSON.stringify(products));
+		res.redirect('/products/detalle/' + id)
     }
 }
 
