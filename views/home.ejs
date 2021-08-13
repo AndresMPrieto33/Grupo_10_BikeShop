@@ -1,84 +1,36 @@
 <!DOCTYPE html>
-<html>
-    <!-- ## head ##-->
-    <%- include('partial/head') %> 
-    <!-- ## head ##-->
-    <body>
-        <!--## header ##  -->
-        <%- include('partial/header') %>
-        <!-- ## header ## -->
+<html lang="en">
+        <!-- ## HEAD ## -->
+        <%- include('partials/head') %>
+        <!-- ## HEAD ## -->
+<body>
+    <main>
+        <!-- ### HEADER ### -->
+        <%- include('partials/header') %>
+        <!-- ### HEADER ### -->
 
-        <main>
-            <h2>Novedades</h2>
+        <h2>Novedades</h2>
+        <% for( let i = 0; i < nuevos.length; i++ ) { %>
+        
             <div class="nov">
-            <section class="productos-novedades">
-                <div class="novedades">
-                    <a href="/detalle"><img src="images/bici02.jpg" alt="Imagen Bicicleta"></a>
-                    <div class="detalle">
-                        <div class="description"><h4>Bicicleta Fulcrum</h4></div>
-                        <div class="precio"><p>$91.000</p></div>
-                        <a href="/Carrito"><i class="fas fa-shopping-cart"></i></a>
+                <section class="productos-novedades">
+                    <div class="novedades">
+                        <a href="/products/detail/<%= nuevos[i].id  %>"><img src="img/products/<%= nuevos[i].image %>" alt="Imagen Bicicleta"></a>
+                        <div class="detalle">
+                            <div class="description"><h4><%= nuevos[i].name %></h4></div>
+                            <div class="precio"><p>$<%= nuevos[i].price %></p></div>
+                            <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
                     </div>
-                </div>
-            </section>
-            <section class="productos-novedades">
-                <div class="novedades">
-                    <img src="images/ruedas01.jpg" alt="Imagen Ruedas">
-                    <div class="detalle">
-                        <div class="description"><h4>Juego de ruedas T-Pow</h4></div>
-                        <div class="precio"><p>$16.800</p></div>
-                        <a href="/Carrito"><i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-            </section>
-            <section class="productos-novedades">
-                <div class="novedades">
-                    <img src="images/accesorios01.jpg" alt="Imagen Accesorios de Bicicleta">
-                    <div class="detalle">
-                        <div class="description"><h4>Kit de ruta</h4></div>
-                        <div class="precio"><p>$10.000</p></div>
-                        <a href="/Carrito"><i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-            </section>
-        </div>
+                </section>
+            </div>
+        <% } %>
 
-            <h2>Productos Destacados</h2>
-            <div class="des">
-            <section class="productos-destacados">
-                <div class="destacados">
-                    <img src="images/bici02.jpg" alt="Imagen Bicicleta">
-                    <div class="detalle">
-                        <div class="description"><h4>Bicicleta Fulcrum</h4></div>
-                        <div class="precio"><p>$91.000</p></div>
-                        <a href="/Carrito"><i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-            </section>
-            <section class="productos-destacados">
-                <div class="destacados">
-                    <img src="images/ruedas01.jpg" alt="Imagen Ruedas">
-                    <div class="detalle">
-                        <div class="description"><h4>Juego de ruedas T-Pow</h4></div>
-                        <div class="precio"><p>$16.800</p></div>
-                        <a href="/Carrito"><i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-            </section>
-            <section class="productos-destacados">
-                <div class="destacados">
-                    <img src="images/accesorios01.jpg" alt="Imagen Accesorios de Bicicleta">
-                    <div class="detalle">
-                        <div class="description"><h4>Kit de ruta</h4></div>
-                        <div class="precio"><p>$10.000</p></div>
-                        <a href="/Carrito"><i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
-            </section>
-        </div>
-        </main>
 
-        <!-- ## footer## -->
-        <%- include('partial/footer') %>
-        <!-- ## footer## -->
+
+        <!-- ## footer ## -->
+        <%- include('partials/footer') %>
+        <!-- ## footer ## -->
+    </main>   
+</body>
 </html>

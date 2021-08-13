@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+        <!-- ## HEAD ## -->
+        
+        <%- include('partials/head', {title: detalle.name}) %>
+        <!-- ## HEAD ## -->
+<body>
+        <!--  -->
+        <%- include('partials/header'); %>
+        <!--  -->
+        <section class="detalle-producto"></section>
+        <article>
+                <img src="/img/products/<%=  detalle.image %>" alt="Foto de <%= detalle.name %>">
+                
+                <div class="contenedor">
+                <h2><%=  detalle.name %></h2>
+                <ul class="lista">
+                        <p class="lista"><%=  detalle.description %></p>                     
+                        <p>$<%=  detalle.price %></p>
+                </ul> 
+                <section class="boton-comprar-detalle">
+                        <button><a href="/products/cart">Añadir al Carrito</a></button>
+                </section>
+                </div>
+        </article>
+        <!-- ## footer ## -->
+        <%- include('partials/footer') %>
+        <!-- ## footer ## -->
+</body>
+</html>

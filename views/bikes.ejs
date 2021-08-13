@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+        <!-- ## HEAD ## -->
+        <%- include('partials/head') %>
+        <!-- ## HEAD ## -->
+    <body>
+        <!-- ## header ## -->
+        <%- include('partials/header') %>
+        <!-- ## header ## -->
+
+        <% for( let i = 0; i < bikes.length; i++ ) { %>            
+            <div class="productsAll">
+                <section class="productos-novedades">
+                    <div class="novedades">
+                        <a href="/products/detail/<%= bikes[i].id  %>"><img src="/img/products/<%= bikes[i].image %>" alt="Imagen Bicicleta"></a>
+                        <div class="detalle">
+                            <div class="name"><h4><%= bikes[i].name %></h4></div>
+                            <div class="description"><p><%= bikes[i].description %></p></div>
+                            <div class="precio"><p>$<%= bikes[i].price %></p></div>
+                            <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                </section>           
+            </div>
+        <% } %>
+
+        <!-- ## footer## -->
+        <%- include('partials/footer') %>
+        <!-- ## footer## -->
+    </body>
+</html>

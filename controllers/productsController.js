@@ -1,18 +1,41 @@
 const path = require('path');
-const fs = require('fs');
+const fs =require('fs');
+
 const productsFilePath = path.join(__dirname, '../data/productsDB.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-
-const productsController ={
+const productsController = {
     products: (req, res) => {
-        res.render('products/productsAll', {products: products});
+        res.render('productsAll', {products: products});
     },
-    detalle: (req, res) => {
-        res.render('detalle');
+    bikes: (req, res) => {
+        let bikes = products.filter(element => element.type === "bicicletas");
+        res.render('bikes', {bikes: bikes});
     },
-    carrito: (req, res) => {
-        res.render('carrito');
+    accesorios:(req, res) =>{
+        let accesorios = products.filter(element => element.type === "accesorios");
+        res.render('accesorios', {accesorios: accesorios});
+    },
+    parts: (req, res) => {
+        let parts = products.filter(element => element.type === "partes");
+        res.render('parts', {parts: parts});
+    },
+    ruedas: (req, res) =>{
+        let ruedas = products.filter(element => element.type === "ruedas");
+        res.render('ruedas', {ruedas: ruedas});
+    },
+    sale: (req, res) => {
+        let sale = products.filter(element => element.category === "sale");
+        res.render('ofertas', {sale: sale});
+    },
+    cart: (req, res) => {
+        res.render('cart');
+    },
+    detail: (req, res) => {
+        let id = req.params.id;
+		let detalle = products.find(element => element.id == id);
+		res.render('detail', {detalle: detalle});
+        
     },
     nuevo: (req, res) => {
 		// Do the magic
@@ -32,8 +55,9 @@ const productsController ={
 
 		products.push(nuevoProducto);
 		fs.writeFileSync(productsFilePath, JSON.stringify(products));
-		res.redirect('/products/detalle/' + id)
+		res.redirect('/products/detail/' + id)
     }
 }
+
 
 module.exports = productsController;

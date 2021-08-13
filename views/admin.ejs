@@ -8,74 +8,75 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/adminStyles.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/adminStyles.css">
     <title>Admin Page</title>
 </head>
 <body>
-    <div class="profile">
-            <i class="fas fa-portrait"></i>
-    </div>
-        
-    <div class="logo">
-        <a href="/"><img src="images/bikeShop_002.png" alt= "Logo de MiBikeShop"></a>
-    </div>
-    
-    
+    <main>
 
-    <div class="container">
-        <form action="/products/store" method="POST">
-            <div class="campo">
-                <div class="tag">
-                    <label for="name" class="form-label">Nombre del producto:</label>
-						<input type="text" id="name" name="name" placeholder="Ej: Bicicleta Venzo" class="form-input">
-                </div>
-                
-            </div>
-            <div class="campo">
-                <div class="tag">
-                    <label for="name" class="form-label">Descripcion del producto:</label>
-						<input type="text" id="name" name="description" placeholder="Ej: Bicicleta Venzo" class="form-input">                    
-                </div>
-                
-            </div>
-            <div class="campo">
-                <div class="tag">
-                    <label for="name" class="form-label">Precio:</label>
-						<input type="text" id="name" name="price" placeholder="Ej: Bicicleta Venzo" class="form-input">
-                </div>
-                
-            </div>
-            <div class="campo">
-                <div class="tag">
-                    <label for="name" class="form-label">Descuento:</label>
-						<input type="text" id="name" name="discount" placeholder="Ej: Bicicleta Venzo" class="form-input">
-                </div>
-                
-            </div>
-            <div class="campo">
-                <div class="tag">
-                    <label for="description" class="form-label">Imagenes:</label>
-						<input name="image" id="images" class="form-input" type="file">
-
-                </div>
-            </div>
-            <div>
-                <label for="category" class="form-label">Categoría:</label>
-						<select name="category" id="category" class="form-input">
-							<option value="">Elegí</option>
-							<option value="in-sale">Bicicletas</option>
-							<option value="visited">Otros</option>
-            </div>
-            <div class="botones">                    
-                <input type="submit" value="Confirmar" class="submit">
-                <input type="reset" value="Borrar">
-            </div>
-        </form>
+        <div class="profile">
+                <i class="fas fa-portrait"></i>
+        </div>
+            
+        <div class="logo">
+            <a href="/"><img src="/img/bikeShop_002_2.png" alt= "Logo de MiBikeShop"></a>
+        </div>
         
-    </div>
+        
+        <section>
+            <div class="container">
+                <form action="/products/store" method="POST">
+                    <div class="campo">
+                        <div class="tag">
+                            <label for="name" class="form-label">Nombre del producto:</label>
+                                <input type="text" id="name" name="name" placeholder="Ej: Bicicleta Venzo" class="form-input">
+                        </div>
+                        
+                    </div>
+                    <div class="campo">
+                        <div class="tag">
+                            <label for="name" class="form-label">Descripcion del producto:</label>
+                                <input type="text" id="name" name="description" placeholder="Ej: Bicicleta Venzo" class="form-input">                    
+                        </div>
+                        
+                    </div>
+                    <div class="campo">
+                        <div class="tag">
+                            <label for="name" class="form-label">Precio:</label>
+                                <input type="text" id="name" name="price" placeholder="Ej: Bicicleta Venzo" class="form-input">
+                        </div>
+                        
+                    </div>
+                    <div class="campo">
+                        <div class="tag">
+                            <label for="name" class="form-label">Descuento:</label>
+                                <input type="text" id="name" name="discount" placeholder="Ej: Bicicleta Venzo" class="form-input">
+                        </div>
+                        
+                    </div>
+                    <div class="campo">
+                        <div class="tag">
+                            <label for="description" class="form-label">Imagenes:</label>
+                                <input name="image" id="images" class="form-input" type="file">
+        
+                        </div>
+                    </div>
+                    <div>
+                        <label for="category" class="form-label">Categoría:</label>
+                                <select name="category" id="category" class="form-input">
+                                    <option value="">Elegí</option>
+                                    <option value="in-sale">Bicicletas</option>
+                                    <option value="visited">Otros</option>
+                    </div>
+                    <div class="botones">                    
+                        <input type="submit" value="Confirmar" class="submit">
+                        <input type="reset" value="Borrar">
+                    </div>
+                </form>
+                
+            </div>
+        </section>
+    </main>
 </body>
 </html>
-
-
-
