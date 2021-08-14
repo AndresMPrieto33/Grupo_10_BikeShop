@@ -38,8 +38,7 @@ const productsController = {
         
     },
     nuevo: (req, res) => {
-		// Do the magic
-		res.render('../views/products/admin');
+		res.render('admin');
 	},
     store: (req, res) => {
         let nuevoId = products[products.length - 1].id + 1;
