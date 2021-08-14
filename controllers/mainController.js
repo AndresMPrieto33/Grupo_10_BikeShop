@@ -6,8 +6,9 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const mainController = {
     home: (req, res) => {
-        let nuevos = products.filter(elment => elment.category === 'new'); 
-        let ofertas = products.filter(elment => elment.category === 'sale'); 
+        let nuevos = products.filter(elment => elment.category === 'new'); // a prueba
+        let ofertas = products.filter(elment => elment.category === 'sale'); // a prueba
+        res.render('home', {nuevos: nuevos, ofertas: ofertas});
     }
 }
 
