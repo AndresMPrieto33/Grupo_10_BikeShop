@@ -8,10 +8,10 @@
         <!--  -->
         <%- include('partials/header'); %>
         <!--  -->
-        <section class="detalle-producto"></section>
-        <article>
+        <section class="detalle-producto">
+                <div class="detalle-img">
                 <img src="/img/products/<%=  detalle.image %>" alt="Foto de <%= detalle.name %>">
-                
+                </div>
                 <div class="contenedor">
                 <h2><%=  detalle.name %></h2>
                 <ul class="lista">
@@ -22,7 +22,7 @@
                         <button><a href="/products/cart">Añadir al Carrito</a></button>
                 </section>
                 </div>
-        </article>
+        </section>
         <!-- ## footer ## -->
         <%- include('partials/footer') %>
         <!-- ## footer ## -->

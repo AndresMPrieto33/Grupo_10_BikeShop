@@ -16,9 +16,16 @@
                         <div class="detalle">
                             <div class="name"><h4><%= sale[i].name %></h4></div>
                             <div class="description"><p><%= sale[i].description %></p></div>
-                            <div class="precio"><p>$<%= sale[i].price %></p></div>
-                            <a href="/products/cart"><i class="fas fa-shopping-cart"></i></a>
-                        </div>
+                            <div class="precio"><p><del> $<%= sale[i].price %></del></p></div>
+                            <div class="discount">
+                                <% let precioFinal = (sale[i].price) - ((sale[i].price * 10) / 100) %>
+                               <p> Descuento: $<%= (sale[i].price * 10) / 100 %></p>  
+                                <b> <p> Precio final: $<%= precioFinal %></p></b>
+                            </div>
+                            <section class="boton-comprar-detalle">
+                                <button><a href="/products/cart">Añadir al Carrito</a></button>
+                        </section>
+                        </div>                        </div>
                     </div>
                 </section>           
             </div>

@@ -1,0 +1,41 @@
+.botones-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.botones-cart input{
+    padding: 5px;
+    background-color: rgb(45, 45, 124);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    min-width: 119px;
+    margin: 5px;
+}
+main.carrito{
+    border: solid 1px #000;
+    border-radius: 8px;
+    width: 80%;
+    margin: auto;
+    background-color: #c2c0c0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (min-width:768px) {
+    main.carrito {
+        margin-top: 10px;
+    }
+
+    main.carrito h3{
+        font-size: 24px;
+    }
+    main.carrito p{
+        font-size: 18px;
+    }
+    .botones-cart input{
+        width: 25%;
+        font-size: 17px;
+    }
+}

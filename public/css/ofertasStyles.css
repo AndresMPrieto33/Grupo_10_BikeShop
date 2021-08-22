@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Roboto', 'sans-serif';
+    background-color: #e0e0e0
+}
+.productsAll .productos-novedades{
+    display: flex;
+    text-align: center;
+    margin-bottom: 30px;
+    justify-content: center;
+    
+    }
+    .productsAll .novedades{
+    margin: auto;
+    
+    }
+    .productsAll .novedades img{
+        width: 95%;
+        border-bottom: none;
+        background-color: #C2C0C0;
+        padding: 10px;
+        border: #000 solid 1px;
+        border-radius: 8px;
+    }
+    .productsAll .productos-novedades .novedades .detalle{
+        width: 95%;
+        height: auto;
+    }
+    .productsAll .detalle h4{
+        font-size: 28px;
+    margin-bottom: 30px;
+    }
+    .productsAll .detalle .description{
+        font-size: 18px;
+        margin: 15px;
+    }
+    .productsAll .detalle .precio p{
+        font-size: 20px;
+        margin: 15px;
+    }
+    .productsAll .detalle a{
+        font-size: 22px;
+    }
+    .detalle .discount{
+        display: block;
+    }
+
+    @media (min-width: 768px) {
+        
+    }
+
+    @media (min-width: 1280px) {
+        .productsAll .productos-novedades{
+            width: 90%;
+            margin: auto;
+            display: flex;
+            text-align: center;
+            margin-bottom: 30px;
+            justify-content: center;
+            
+            }
+            .productsAll .novedades{
+            display: flex;
+            }
+            .productsAll .novedades a{
+                width: 63%;
+            }
+            .productsAll .novedades a img{
+                width: 90%;
+                height: 75vh;
+            }
+            .productsAll .productos-novedades .novedades .detalle {
+                height: 73vh; 
+                width: 35%;  
+                
+            }
+            .productsAll .detalle .name h4{
+                font-size: 1.3em;
+                margin: 1px;
+            }
+            .productsAll .detalle .description{
+                font-size: 18px;
+                
+            }
+            .productsAll .detalle .precio{
+                font-size: 20px;
+            }
+            .productsAll .detalle a{
+                font-size: 1em;
+            }       
+    }
+
+.detalle .discount p{
+    color: #0f0f0f;
+    font-size: 18px;
+    margin: auto;
+    width: 30vw;
+}
+

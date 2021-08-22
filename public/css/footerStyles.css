@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Roboto', 'sans-serif';
+    background-color: #e0e0e0
+}
+
+footer{
+    margin-top: 20px ;
+    padding-top: 15px;
+    background-color: #C2C0C0;
+    
+}
+footer section{
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+footer .info{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+footer .info p{
+    margin-top: 10px;
+}
+footer .seguinos{
+    width: 90%;
+    height: 80px;
+    margin: auto;
+    text-align: center;
+}
+footer .seguinos h3{
+    margin-top: 15px;
+}
+footer .seguinos div.logos-redes ul{
+    font-size: 1.7rem;
+    padding: 0 0 34px;
+    text-align: center;
+}
+footer .seguinos div.logos-redes li{
+    display: inline;
+}
+footer .copyrigth{
+    width: 90%;
+    height: 30px;
+    margin: auto;
+    text-align: center;
+}
+footer i{
+    color: rgb(45, 45, 124) ;
+    margin-top: 5px;
+}
