@@ -9,17 +9,13 @@
     <!-- ### HEADER ### -->
 
 <main class="register">
-    <form action="/" method="POST">
+    <form action="/user/store" method="POST"  enctype="multipart/form-data">
         <div class="personal-info">
-        <input type="text" name="name" placeholder="Nombre y apellido">
+        <input type="text" name="firstName" placeholder="Nombre">
             <br>
-            <input type="text" name="user" placeholder="Elija un nombre de usuario">
+            <input type="text" name="lastName" placeholder="Apellido">
             <br>
             <input type="text" name="email" placeholder="ejemplo@undostres.com">
-            <br>
-            <label for="birthd_date"><b>Fecha de nacimiento</b></label>
-            <br>
-            <input type="text" name="birthd_date" id="birth_date">
             <br>
             <input type="text" name="address" placeholder="Dirección">
         </div>
@@ -60,6 +56,12 @@
             <br>
             <br>
         </div>
+        <div class="campo">
+            <div class="tag">
+                <label for="description" class="form-label">Imagen de perfil:</label>
+                    <input name="image" id="images" class="form-input" type="file">
+
+            </div>
         <div class="botones">                    
             <input type="submit" value="Enviar" class="submit">
             <input type="reset" value="Borrar">
