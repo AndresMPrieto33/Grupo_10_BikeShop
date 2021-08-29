@@ -48,8 +48,8 @@ const productsController = {
 			price: req.body.price,
 			category: req.body.category,
 			discount: req.body.discount,
-			id: nuevoId
-		//	image: req.file.originalname
+			id: nuevoId,
+			image: req.file.originalname,
 		}
 
 		products.push(nuevoProducto);

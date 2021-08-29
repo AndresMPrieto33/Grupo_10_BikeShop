@@ -26,7 +26,7 @@
         
         <section>
             <div class="container">
-                <form action="/products/store" method="POST">
+                <form action="/products/store" method="POST" enctype="multipart/form-data">
                     <div class="campo">
                         <div class="tag">
                             <label for="name" class="form-label">Nombre del producto:</label>
@@ -62,13 +62,18 @@
         
                         </div>
                     </div>
-                    <div>
+                    <div class="options">
                         <label for="category" class="form-label">Categoría:</label>
                                 <select name="category" id="category" class="form-input">
                                     <option value="">Elegí</option>
                                     <option value="in-sale">Bicicletas</option>
-                                    <option value="visited">Otros</option>
+                                    <option value="visited">Accesorios</option>
+                                    <option value="in-sale">Componentes</option>
+                                    <option value="in-sale">Indumentaria</option>
+                                    <option value="in-sale">Ruedas</option>
+                                    <option value="in-sale">Ofertas</option>
                     </div>
+                
                     <div class="botones">                    
                         <input type="submit" value="Confirmar" class="submit">
                         <input type="reset" value="Borrar">

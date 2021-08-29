@@ -9,7 +9,9 @@ body {
     background-color: #e0e0e0
 }
 
-
+h2 {
+    text-align: center;
+}
 .nov .productos-novedades{
     display: flex;
     text-align: center;
