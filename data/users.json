@@ -16,6 +16,14 @@
     "password": "Password",
     "category": "User",
     "image": "user1.jpg"
+  },
+  {
+    "id": "21",
+    "name": "prueba",
+    "lastName": "prueba",
+    "email": "prueba@prueba.com",
+    "address": "prueba",
+    "caracteristicas": "a",
+    "imagenPerfil": "perfil.png"
   }
-  
 ]

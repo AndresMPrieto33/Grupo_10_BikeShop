@@ -16,17 +16,17 @@ const userController = {
         res.render('admin');
     },
     storage: (req, res) => {
-        // const resutlValidation = validationResult(req);
-
-        // if(resutlValidation.errors.length > 0){
-        //     return res.render('register', {
-        //         errors: resutlValidation.mapped(),
-        //         oldData: req.body
-        //     });
-        // }
+         const resutlValidation = validationResult(req);
+            console.log(resutlValidation);
+         if(resutlValidation.errors.length > 0){
+             return res.render('register', {
+                 errors: resutlValidation.mapped(),
+                 oldData: req.body
+             });
+         }
 
         let nuevoId = user[user.length - 1].id + 1;
-        let id = nuevoId;
+        // let id = nuevoId;
         let nuevoUsuario = {
             id: nuevoId,
             name: req.body.firstName,
