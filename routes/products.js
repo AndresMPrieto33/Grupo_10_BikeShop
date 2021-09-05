@@ -25,6 +25,7 @@ router.get('/ruedas', productsController.ruedas);
 router.get('/ofertas', productsController.sale);
 router.get('/nuevo', productsController.nuevo);
 router.post('/store', upload.single('image'), productsController.store);
+router.post('/delete/:id', productsController.delete);
 
 
 module.exports = router;

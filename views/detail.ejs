@@ -18,9 +18,12 @@
                         <p class="lista"><%=  detalle.description %></p>                     
                         <p>$<%=  detalle.price %></p>
                 </ul> 
-                <section class="boton-comprar-detalle">
+                <div class="boton-comprar-detalle">
                         <button><a href="/products/cart">Añadir al Carrito</a></button>
-                </section>
+                </div>
+                <form action="/products/delete/<%= detalle.id %>" method="POST" style="display: inline-flex">
+                        <button type="submit" class="action-button delete">ELIMINAR</button>
+                    </form>
                 </div>
         </section>
         <!-- ## footer ## -->

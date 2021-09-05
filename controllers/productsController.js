@@ -2,7 +2,7 @@ const path = require('path');
 const fs =require('fs');
 
 const productsFilePath = path.join(__dirname, '../data/productsDB.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productsController = {
     products: (req, res) => {
@@ -55,6 +55,12 @@ const productsController = {
 		products.push(nuevoProducto);
 		fs.writeFileSync(productsFilePath, JSON.stringify(products));
 		res.redirect('/products/detail/' + id)
+    },
+    delete: (req, res) => {
+        let idAQuitar = req.params.id;
+        products = products.filter(element => element.id != idAQuitar);
+        fs.writeFileSync(productsFilePath, JSON.stringify(products));
+        res.redirect('/products/productsAll');
     }
 }
 
