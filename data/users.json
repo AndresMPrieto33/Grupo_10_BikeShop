@@ -1,6 +1,6 @@
 [
  {
-  "id": "1",
+  "id": 1,
   "firstName": "First Name",
   "lastName": "Last Name",
   "email": "Email",
@@ -9,7 +9,7 @@
   "image": "admin1.jpg"
  },
  {
-  "id": "2",
+  "id": 2,
   "firstName": "First Name",
   "lastName": "Last Name",
   "email": "Email",
@@ -18,7 +18,7 @@
   "image": "user1.jpg"
  },
  {
-  "id": "21",
+  "id": 3,
   "name": "prueba",
   "lastName": "prueba",
   "email": "prueba@prueba.com",
@@ -27,7 +27,7 @@
   "imagenPerfil": "perfil.png"
  },
  {
-  "id": "211",
+  "id": 4,
   "firstName": "Pedro",
   "lastName": "Rodriguez",
   "email": "pedromrodriguez@gmail.com",
@@ -38,13 +38,13 @@
   "image": "perfil1.png"
  },
  {
-  "id": "211111",
+  "id": 5,
   "firstName": "prueba3",
   "lastName": "prueba3",
   "email": "prueba3@prueba.com",
   "address": "sda",
   "caracteristicas": "a",
-  "password": "$2a$10$nflddoULrODBiYk.1B8cAOcMDE63RoStSfTHrBgtnZDJJdmmgh83i",
+  "password": "$2a$10$s2SmEbA21MqDiVBuyAkdoexH4ZfMVvAZcjc9LTZj0uX.qKGQ3xgpC",
   "image": "z111216marv_rafaalbuquerque.png"
  }
 ]
