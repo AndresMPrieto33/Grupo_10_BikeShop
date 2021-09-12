@@ -70,7 +70,7 @@
         <br> -->
         <div class="password">
             <div class="personal-info">
-                <input type="password" name="pass" placeholder="Creá tu contraseña" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.password : null %>"> 
+                <input type="password" name="password" placeholder="Creá tu contraseña" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.password : null %>"> 
                 <% if (locals.errors && errors.password) { %>
                     <div class="error-text"><%= errors.password.msg %></div>                     
                 <% } %>

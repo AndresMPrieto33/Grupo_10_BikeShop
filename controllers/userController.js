@@ -10,7 +10,7 @@ const user = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 const userController = {
     register: (req, res) => {
         console.log(req.cookies.userEmail);
-       return res.render('register');
+        return res.render('register');
     },
 
     login: (req, res) => {
@@ -27,7 +27,7 @@ const userController = {
         let userToLogin = User.findByField('email', req.body.email);
 
         if (userToLogin) {
-            let isOkThePassword = bcryptjs.compareSync(req.body.pass, userToLogin.password);
+            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkThePassword) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
@@ -88,28 +88,12 @@ const userController = {
 
         let userToCreate = {
             ...req.body,
-            password: bcryptjs.hashSync(req.body.pass, 10),
+            password: bcryptjs.hashSync(req.body.password, 10),
             image: req.file.filename
 
         }
         
         let userCreated = User.create(userToCreate);
-        return res.redirect('/user/login');
-        
-
-         
-        let nuevoId = user[user.length - 1].id + 1;
-        let nuevoUsuario = {
-            id: nuevoId,
-            name: req.body.firstName,
-            lastName: req.body.lastName,
-            email: req.body.email,
-            address: req.body.address,
-            caracteristicas: req.body.caracteristicas,
-            imagenPerfil: req.file.originalname,
-        }
-        user.push(nuevoUsuario);
-        fs.writeFileSync(userFilePath, JSON.stringify(user, null, 2));
         return res.redirect('/user/login');
     },
     
