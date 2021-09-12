@@ -8,15 +8,26 @@
         <%- include('partials/header') %>
         <!-- ### HEADER ### -->
         <main class="login">
-            <form action="/" method="POST">
+            <form action="/user/login" method="POST">
                 <div class="user">
-                    <input type="text" name="user" placeholder="Nombre de usuario" required>
+                    <input type="text" name="email" placeholder="Email" required>
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="error-text">
+                            <%= errors.email.msg %> 
+                        </div>
+                    <% } %>
                     <br>
                     <input type="password" name="pass" placeholder="Ingresá tu contraseña" required>
                     <br>
                 </div>
+                <div class="recordarme">
+                    <label for="">
+                        <input type="checkbox" name="remember_user">
+                        Recordar mi usuario
+                    </label>
+                </div>
                 <div class="botones">
-                    <input type="submit" value="Ingreasr" class="submit">
+                    <input type="submit" value="Ingresar" class="submit">
                 </div>
             </form>
         </main>

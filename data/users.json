@@ -1,30 +1,40 @@
 [
-  {
-    "id": "1",
-    "firstName": "First Name",
-    "lastName": "Last Name",
-    "email": "Email",
-    "password": "Password",
-    "category": "Admin",
-    "image": "admin1.jpg"
-  },
-  {
-    "id": "2",
-    "firstName": "First Name",
-    "lastName": "Last Name",
-    "email": "Email",
-    "password": "Password",
-    "category": "User",
-    "image": "user1.jpg"
-  },
-  {
-    "id": "21",
-    "name": "prueba",
-    "lastName": "prueba",
-    "email": "prueba@prueba.com",
-    "address": "prueba",
-    "caracteristicas": "a",
-    "imagenPerfil": "perfil.png"
-  } 
-
+ {
+  "id": "1",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "email": "Email",
+  "password": "Password",
+  "category": "Admin",
+  "image": "admin1.jpg"
+ },
+ {
+  "id": "2",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "email": "Email",
+  "password": "Password",
+  "category": "User",
+  "image": "user1.jpg"
+ },
+ {
+  "id": "21",
+  "name": "prueba",
+  "lastName": "prueba",
+  "email": "prueba@prueba.com",
+  "address": "prueba",
+  "caracteristicas": "a",
+  "imagenPerfil": "perfil.png"
+ },
+ {
+  "id": "211",
+  "firstName": "Pedro",
+  "lastName": "Rodriguez",
+  "email": "pedromrodriguez@gmail.com",
+  "address": "Intendente Gonzalez 149",
+  "caracteristicas": "a",
+  "pass": "hola123",
+  "password": "$2a$10$0I82cSedppKvx8s1fhR5budqAnBd6K3jZw3DOTM4KnFH6/HPze.Qy",
+  "image": "perfil1.png"
+ }
 ]

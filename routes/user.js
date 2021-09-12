@@ -4,6 +4,9 @@ const path = require('path');
 const multer = require('multer');
 const { body } = require('express-validator');
 
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
+
 const storage = multer.diskStorage({ 
    destination: function (req, file, cb) { 
       cb(null, path.resolve(__dirname, '../public/images/users')); 
@@ -39,13 +42,16 @@ const userController = require('../controllers/userController');
 
     ]
 
-//FORMUÑARIO DE REGISTRO
-router.get('/register', userController.register);
+
+router.get('/register', guestMiddleware, userController.register);
 router.post('/storage', upload.single('image'),  userController.storage);
 
-//LOGIN
-router.get('/login', userController.login);
+router.get('/login', guestMiddleware, userController.login);
+router.post('/login', userController.loginProcess);
+
 router.get('/admin', userController.admin);
 
+router.get('/profile', authMiddleware, userController.profile);
+router.get('/logout', userController.logout);
 
 module.exports = router;
