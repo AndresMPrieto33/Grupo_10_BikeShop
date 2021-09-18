@@ -46,5 +46,15 @@
   "caracteristicas": "a",
   "password": "$2a$10$s2SmEbA21MqDiVBuyAkdoexH4ZfMVvAZcjc9LTZj0uX.qKGQ3xgpC",
   "image": "z111216marv_rafaalbuquerque.png"
+ },
+ {
+  "id": 6,
+  "firstName": "Test",
+  "lastName": "Test",
+  "email": "test@gmail.com",
+  "address": "test",
+  "caracteristicas": "a",
+  "password": "$2a$10$DaE7NJWva0Ep4g8rw3SjZeDHz9q4MRCGxWFMZEAQaKyt48ZByo3vW",
+  "image": "booster-gold-153025.jpg"
  }
 ]
