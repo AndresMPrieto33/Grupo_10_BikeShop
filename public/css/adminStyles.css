@@ -45,13 +45,24 @@ body{
 }
 
 .campo {
-    width: 100%;
+    width: 84%;
     background-color: #c2c0c0;    
     padding: 2%;
     margin: auto;
+    
+    
     /* border: solid 1px red; */
     
 }
+.campo .tag{
+    border: none;
+}
+
+.campo input #file #upload-button{
+    padding: 4px;
+    background-color: rgb(45, 45, 124);
+}
+
 .tag{
     background-color: #fff;
     padding: 2%;
