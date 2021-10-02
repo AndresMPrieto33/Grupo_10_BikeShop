@@ -57,9 +57,7 @@ const userController = {
             }
         });
     },
-    admin: (req, res) => {
-        res.render('admin');
-    },
+    
     storage: (req, res) => {
         const resutlValidation = validationResult(req);
 

@@ -49,8 +49,6 @@ router.post('/storage', upload.single('image'),  userController.storage);
 router.get('/login', guestMiddleware, userController.login);
 router.post('/login', userController.loginProcess);
 
-router.get('/admin', userController.admin);
-
 router.get('/profile', authMiddleware, userController.profile);
 router.get('/logout', userController.logout);
 

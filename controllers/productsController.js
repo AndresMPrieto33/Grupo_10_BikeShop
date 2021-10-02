@@ -38,7 +38,7 @@ const productsController = {
         
     },
     nuevo: (req, res) => {
-		res.render('admin');
+		res.render('productCreate');
 	},
     store: (req, res) => {
         let nuevoId = products[products.length - 1].id + 1;
@@ -61,6 +61,11 @@ const productsController = {
         products = products.filter(element => element.id != idAQuitar);
         fs.writeFileSync(productsFilePath, JSON.stringify(products));
         res.redirect('/products/productsAll');
+    },
+    edit: (req, res) => {
+        let id = req.params.id;
+		let productToEdit = products.find(element => element.id == id);
+        res.render('productEdit', {productToEdit: productToEdit}) ;
     }
 }
 
