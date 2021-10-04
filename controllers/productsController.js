@@ -4,10 +4,19 @@ const fs =require('fs');
 const productsFilePath = path.join(__dirname, '../data/productsDB.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+//Requiere de la DB
+const db = require('../database/models');
+
 const productsController = {
     products: (req, res) => {
-        res.render('productsAll', {products: products});
+        db.Product.findAll()
+         .then( data => {
+            res.render('productsAll', {products: data});
+         }) 
     },
+    /*linea vieja
+    res.render('productsAll', {products: products});
+    */
     bikes: (req, res) => {
         let bikes = products.filter(element => element.type === "bicicletas");
         res.render('bikes', {bikes: bikes});
