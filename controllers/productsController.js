@@ -1,8 +1,8 @@
 const path = require('path');
 const fs =require('fs');
 
-const productsFilePath = path.join(__dirname, '../data/productsDB.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+// const productsFilePath = path.join(__dirname, '../data/productsDB.json');
+// let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 //Requiere de la DB
 const db = require('../database/models');

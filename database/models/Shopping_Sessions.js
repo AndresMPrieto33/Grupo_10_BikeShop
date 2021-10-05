@@ -1,6 +1,4 @@
-const { DataTypes } = require("sequelize/types")
-
-module.exports = (sequelize, DataTypea) => {
+module.exports = (sequelize, DataTypes) => {
     let cols = {
         id: {
             type: DataTypes.INTEGER,

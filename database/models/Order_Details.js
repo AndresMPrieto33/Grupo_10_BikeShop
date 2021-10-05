@@ -10,12 +10,12 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         total: {
-            type: DataTypes.decimal,
-            allowNull: false,
+            type: DataTypes.DECIMAL,
+            allowNull: false
         },
         payment_details_id: {
             type: DataTypes.INTEGER,
-            allowNull: fasle
+            allowNull: false
         }
     };
 
