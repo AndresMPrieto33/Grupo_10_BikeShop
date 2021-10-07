@@ -1,8 +1,8 @@
 const path = require('path');
 const fs =require('fs');
 
-// const productsFilePath = path.join(__dirname, '../data/productsDB.json');
-// let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const productsFilePath = path.join(__dirname, '../data/productsDB.json');
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 //Requiere de la DB
 const db = require('../database/models');
@@ -10,10 +10,12 @@ const db = require('../database/models');
 const productsController = {
     products: (req, res) => {
         db.Product.findAll()
-         .then( data => {
+        .then(data => {
             res.render('productsAll', {products: data});
-         }) 
+            
+        }) 
     },
+
     /*linea vieja
     res.render('productsAll', {products: products});
     */
@@ -49,21 +51,42 @@ const productsController = {
     nuevo: (req, res) => {
 		res.render('productCreate');
 	},
-    store: (req, res) => {
-        let nuevoId = products[products.length - 1].id + 1;
-		let id = nuevoId;
-		let nuevoProducto = {
-			name: req.body.name,
-			price: req.body.price,
-			category: req.body.category,
-			discount: req.body.discount,
-			id: nuevoId,
-			image: req.file.originalname,
-		}
+    // store: (req, res) => {
+    //     let nuevoId = products[products.length - 1].id + 1;
+	// 	let id = nuevoId;
+	// 	let nuevoProducto = {
+	// 		name: req.body.name,
+	// 		price: req.body.price,
+	// 		category: req.body.category,
+	// 		discount: req.body.discount,
+	// 		id: nuevoId,
+	// 		image: req.file.originalname,
+	// 	}
 
-		products.push(nuevoProducto);
-		fs.writeFileSync(productsFilePath, JSON.stringify(products));
-		res.redirect('/products/detail/' + id)
+	// 	products.push(nuevoProducto);
+	// 	fs.writeFileSync(productsFilePath, JSON.stringify(products));
+	// 	res.redirect('/products/detail/' + id)
+    // },
+    create: (req, res) => {
+        //let newProduct = req.body;
+
+        db.Product.create({
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            discount: req.body.discount,
+            image: req.file.originalname,
+            brand: req.body.brand,
+            size: req.body.size,
+            color: req.body.color,
+            category_id: 1
+        })
+        .then(()=>{
+            res.redirect('/')
+        })
+        .catch((error)=>{
+            console.log(error);
+        })
     },
     delete: (req, res) => {
         let idAQuitar = req.params.id;

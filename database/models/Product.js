@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
-            allowNull: false
+            allowNull: true
         },
         name: {
             type: DataTypes.STRING,
@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         description: {
             type: DataTypes.STRING,
-            allowNull: false 
+            allowNull: true 
         },
         price: {
             type: DataTypes.DECIMAL,
@@ -27,37 +27,50 @@ module.exports = (sequelize, DataTypes) => {
         },
         category_id: {
             type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        stock_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        product_detail_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        /* 
-        createdAt: {
-            type: DataTypes.DATE,
-            allowNull: false
-        },
-        modifiedAt: {
-            type: DataTypes.DATE,
-            allowNull: false
-        },
-        deletedAt:{ 
-            type: DataTypes.DATE,
-            allowNull: false
-        }*/
+        }
+
+                
+        // createdAt: {
+        //     type: DataTypes.DATE,
+        //     allowNull: false
+        // },
+        // modifiedAt: {
+        //     type: DataTypes.DATE,
+        //     //allowNull: false
+        // }
+        
     };
 
     let config = {
         tableName: "products",
-        timestamps: false
+        updatedAt: 'modifeidAt'
+        // timestamps: false
     };
 
     const Product = sequelize.define("Product", cols, config);
+
+    Product.associate = models => {
+        //Categoria
+        Product.belongsTo(models.Category, {
+            as: 'category',
+            foreignKey: 'category_id'
+        })
+
+        //Detalle de producto
+        Product.belongsTo(models.Product_detail, {
+            as: 'product_detail',
+            foreignKey: 'product_detail_id'
+        })        
+        
+        //Stock
+        Product.belongsTo(models.Stock, {
+            as: 'stock',
+            foreignKey: 'stock_id'
+        })
+
+    }
+
+
     return Product;
 }
 

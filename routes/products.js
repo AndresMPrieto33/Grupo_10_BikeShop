@@ -24,7 +24,7 @@ router.get('/parts', productsController.parts);
 router.get('/ruedas', productsController.ruedas);
 router.get('/ofertas', productsController.sale);
 router.get('/nuevo', productsController.nuevo);
-router.post('/store', upload.single('image'), productsController.store);
+router.post('/create', upload.single('image'), productsController.create);
 router.post('/delete/:id', productsController.delete);
 router.get('/edit/:id/', productsController.edit)
 

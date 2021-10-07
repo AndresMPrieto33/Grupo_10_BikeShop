@@ -1,34 +1,45 @@
+const Category = require("./Category");
+
 module.exports = (sequelize, DataTypes) => {
     let cols = {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
-            allowNull: false
+            allowNull: true
         },
         in_stock: {
             type: DataTypes.INTEGER,
             allowNull: false,
-        }
-        /* 
+        },
+        
         createdAt: {
             type: DataTypes.DATE,
             allowNull: false
-        },
-        modifiedAt: {
-            type: DataTypes.DATE,
-            allowNull: false
-        },
-        deletedAt: {
-            type: DataTypes.DATE,
-            allowNull: false
-        }*/
+        }
+        // modifiedAt: {
+        //     type: DataTypes.DATE,
+        //     allowNull: false
+        // },
+        // deletedAt: {
+        //     type: DataTypes.DATE,
+        //     allowNull: false
+        // }
     };
 
     let config = {
         tableName: "product_detail",
-        timestamps: false
+        updatedAt: 'modifiedAt'
+        // timestamps: false
     };
 
     const Stock = sequelize.define("Stock", cols, config);
+
+    Stock.associate = models =>{
+        Stock.hasMany(models.Product, {
+            as: 'products',
+            foreignKey: 'stock_id'
+        })
+    }
+
     return Stock;
 }
