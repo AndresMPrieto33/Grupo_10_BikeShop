@@ -68,18 +68,19 @@ const productsController = {
 	// 	res.redirect('/products/detail/' + id)
     // },
     create: (req, res) => {
-        //let newProduct = req.body;
-
+        let newProduct = req.body;
         db.Product.create({
             name: req.body.name,
-            description: req.body.description,
             price: req.body.price,
             discount: req.body.discount,
+            description: req.body.description,
+            stock: req.body.stock,
+            //brand: req.body.brand,
             image: req.file.originalname,
-            brand: req.body.brand,
-            size: req.body.size,
-            color: req.body.color,
-            category_id: 1
+            product_detail: req.body.size,
+            category: req.body.category
+            //size: req.body.size,
+            //color: req.body.color
         })
         .then(()=>{
             res.redirect('/')

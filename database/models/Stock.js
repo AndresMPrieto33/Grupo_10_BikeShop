@@ -1,4 +1,4 @@
-const Category = require("./Category");
+const Stock = require("./Stock");
 
 module.exports = (sequelize, DataTypes) => {
     let cols = {
@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             allowNull: true
         },
-        in_stock: {
+        stock: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
@@ -27,19 +27,19 @@ module.exports = (sequelize, DataTypes) => {
     };
 
     let config = {
-        tableName: "product_detail",
+        tableName: "products",
         updatedAt: 'modifiedAt'
         // timestamps: false
     };
 
     const Stock = sequelize.define("Stock", cols, config);
 
-    Stock.associate = models =>{
+    /*Stock.associate = models =>{
         Stock.hasMany(models.Product, {
             as: 'products',
             foreignKey: 'stock_id'
         })
     }
-
+*/
     return Stock;
 }

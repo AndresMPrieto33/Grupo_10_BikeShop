@@ -25,19 +25,25 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false 
         },
-        category_id: {
+        category: {
             type: DataTypes.INTEGER,
+        },
+        product_detail: {
+            type: DataTypes.INTEGER
+        },
+        stock: {
+            type: DataTypes.INTEGER
         }
-
-                
-        // createdAt: {
-        //     type: DataTypes.DATE,
-        //     allowNull: false
-        // },
-        // modifiedAt: {
-        //     type: DataTypes.DATE,
-        //     //allowNull: false
-        // }
+           
+        /*
+        createdAt: {
+            type: DataTypes.DATE,
+            allowNull: false
+        },
+        modifiedAt: {
+            type: DataTypes.DATE,
+            allowNull: false
+         }*/
         
     };
 
@@ -49,7 +55,7 @@ module.exports = (sequelize, DataTypes) => {
 
     const Product = sequelize.define("Product", cols, config);
 
-    Product.associate = models => {
+    /*Product.associate = models => {
         //Categoria
         Product.belongsTo(models.Category, {
             as: 'category',
@@ -68,10 +74,9 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'stock_id'
         })
 
-    }
+    }*/
 
 
     return Product;
 }
 
-    

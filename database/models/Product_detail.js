@@ -7,18 +7,18 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             allowNull: true
         },
-        brand: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
+        //brand: {
+          //  type: DataTypes.STRING,
+            //allowNull: false,
+        //},
         size: {
             type: DataTypes.STRING,
             allowNull: false 
         },
-        color: {
-            type: DataTypes.DECIMAL,
-            allowNull: false
-        }
+        //color: {
+          //  type: DataTypes.DECIMAL,
+            //allowNull: false
+        //}
         
         // createdAt: {
         //     type: DataTypes.DATE,
@@ -31,19 +31,19 @@ module.exports = (sequelize, DataTypes) => {
     };
 
     let config = {
-        tableName: "product_detail",
+        tableName: "products",
         updatedAt: 'modifiedAt'
         // timestamps: false
     };
 
     const Product_detail = sequelize.define("Product_detail", cols, config);
 
-    Product_detail.associate = models =>{
+    /*Product_detail.associate = models =>{
         Product_detail.hasMany(models.Product, {
             as: 'products',
             foreignKey: 'product_detail_id'
         })
-    }
+    }*/
 
 
     return Product_detail;

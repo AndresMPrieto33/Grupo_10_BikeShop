@@ -21,20 +21,20 @@ module.exports = (sequelize, DataTypes) => {
     };
 
     let config = {
-        tableName: "category",
+        tableName: "products",
         updatedAt: 'modifiedAt'
         // timestamps: false
     };
 
     const Category = sequelize.define("Category", cols, config);
 
-    Category.associate = models => {
+    /*Category.associate = models => {
         Category.hasMany(models.Product, {
             as: 'products',
             foreignKey: 'category_id'
         })
     }
-
+*/
 
     return Category;
 }
