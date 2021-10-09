@@ -2,7 +2,7 @@
 <html lang="en">
         <!-- ## HEAD ## -->
         
-        <%- include('partials/head', {title: product.name}) %>
+        <%- include('partials/head', {title: products.name}) %>
         <!-- ## HEAD ## -->
 <body>
         <!--  -->
@@ -10,13 +10,13 @@
         <!--  -->
         <section class="detalle-producto">
                 <div class="detalle-img">
-                <img src="/images/products/<%=  product.image %>" alt="Foto de <%= product.name %>">
+                <img src="/images/products/<%=  products.image %>" alt="Foto de <%= products.name %>">
                 </div>
                 <div class="contenedor">
-                <h2><%=  product.name %></h2>
+                <h2><%=  products.name %></h2>
                 <ul class="lista">
-                        <p class="lista"><%=  product.description %></p>                     
-                        <p>$<%=  product.price %></p>
+                        <p class="lista"><%=  products.description %></p>                     
+                        <p>$<%=  products.price %></p>
                 </ul> 
                 <div class="boton-comprar-detalle">
                         <button><a href="/products/cart">Añadir al Carrito</a></button>
@@ -25,7 +25,7 @@
                         <button><a href="/products/edit/id">Editar producto</a></button>
                 </div>
 
-                <form action="/products/delete/<%= product.id %>" method="POST" style="display: inline-flex">
+                <form action="/products/delete/<%= products.id %>" method="POST" style="display: inline-flex">
                         <button type="submit" class="action-button delete">ELIMINAR</button>
                 </form>
                 </div>
