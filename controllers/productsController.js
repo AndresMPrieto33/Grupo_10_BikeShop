@@ -2,6 +2,7 @@ const path = require('path');
 const fs =require('fs');
 //Requiere de la DB
 const db = require('../database/models');
+const { brotliDecompress } = require('zlib');
 const sequelize = db.sequelize;
 
 
@@ -100,15 +101,49 @@ const productsController = {
         })
     },
     delete: (req, res) => {
+        db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect('/products/productsAll');
+        /*
         let idAQuitar = req.params.id;
         products = products.filter(element => element.id != idAQuitar);
         fs.writeFileSync(productsFilePath, JSON.stringify(products));
         res.redirect('/products/productsAll');
+        */
     },
     edit: (req, res) => {
+        db.Product.findByPk(req.params.id)
+        .then(function (products) {
+            res.render('productEdit', {products: products});
+        })
+        /* 
         let id = req.params.id;
 		let productToEdit = products.find(element => element.id == id);
         res.render('productEdit', {productToEdit: productToEdit}) ;
+        */
+    },
+    updated: (req, res) => {
+        db.Product.update({
+            name: req.body.name,
+            price: req.body.price,
+            discount: req.body.discount,
+            description: req.body.description,
+            stock: req.body.stock,
+            brand: req.body.brand,
+            image: req.file.originalname,
+            product_detail: req.body.size,
+            category: req.body.category,
+            color: req.body.color
+        }, {
+            where: {
+                id: req.params.id
+            }
+        });
+
+        res.redirect('/products/productsAll');
     }
 }
 

@@ -22,7 +22,7 @@
                         <button><a href="/products/cart">Añadir al Carrito</a></button>
                 </div>
                 <div class="boton-comprar-detalle">
-                        <button><a href="/products/edit/id">Editar producto</a></button>
+                        <button><a href="/products/edit/<%= products.id %> ">Editar producto</a></button>
                 </div>
 
                 <form action="/products/delete/<%= products.id %>" method="POST" style="display: inline-flex">
