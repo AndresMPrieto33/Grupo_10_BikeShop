@@ -43,10 +43,15 @@ const productsController = {
         res.render('cart');
     },
     detail: (req, res) => {
+        db.Product.findByPk(req.params.id) 
+            .then(function (product) {
+                res.render('detail', {product: product});
+            })
+        /*
         let id = req.params.id;
 		let detalle = products.find(element => element.id == id);
 		res.render('detail', {detalle: detalle});
-        
+        */
     },
     nuevo: (req, res) => {
 		res.render('productCreate');

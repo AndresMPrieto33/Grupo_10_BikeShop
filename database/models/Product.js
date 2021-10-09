@@ -28,11 +28,16 @@ module.exports = (sequelize, DataTypes) => {
         category: {
             type: DataTypes.INTEGER,
         },
-        product_detail: {
+        brand: {
             type: DataTypes.INTEGER
         },
         stock: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        color: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
            
         /*
