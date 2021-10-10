@@ -41,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
     const User = sequelize.define("User", cols, config);
 
     User.associate = models => {
-        Product.belogsTo(models.User_Rol, {
+        User.belongsTo(models.User_Rol, {
             as: 'user_rol',
             foreignKey: 'user_rol_id'
         })
