@@ -1,3 +1,5 @@
+const Product = require("./Product");
+
 module.exports = (sequelize, DataTypes) => {
     let cols = {
         id: {
@@ -28,15 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         user_rol_Id: {
             type: DataTypes.INTEGER,
             allowNull: false
-        }/* ,
-        createdAt: {
-            type: DataTypes.DATE,
-            allowNull: false
-        },
-        modifiedAt: {
-            type: DataTypes.DATE,
-            allowNull: false
-        }*/
+        }
     };
 
     let config = {
@@ -45,5 +39,13 @@ module.exports = (sequelize, DataTypes) => {
     };
 
     const User = sequelize.define("User", cols, config);
+
+    User.associate = models => {
+        Product.belogsTo(models.User_Rol, {
+            as: 'user_rol',
+            foreignKey: 'user_rol_id'
+        })
+    }
+
     return User;
 }
