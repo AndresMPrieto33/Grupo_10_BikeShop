@@ -135,7 +135,7 @@ const userController = {
                 email: req.body.email,
                 password: bcryptjs.hashSync(req.body.password, 10),
                 avatar: req.file.filename,
-                user_rol_id: req.body.rolId,
+                user_rol_id: 2,
                 user_adress: [{
                     address: req.body.address,
                     number: req.body.number,
