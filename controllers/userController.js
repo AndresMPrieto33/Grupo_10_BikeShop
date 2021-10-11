@@ -95,6 +95,7 @@ const userController = {
         return res.redirect('/user/login');
     },
     
+    
     logout: (req, res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
