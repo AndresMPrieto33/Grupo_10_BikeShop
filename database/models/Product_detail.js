@@ -1,4 +1,5 @@
-const { products } = require("../../controllers/productsController");
+//const { products } = require("../../controllers/productsController");
+// comente la linea 1 que me tiraba error
 
 module.exports = (sequelize, DataTypes) => {
     let cols = {

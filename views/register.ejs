@@ -1,77 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-        <!-- ## HEAD ## -->
-        <%- include('partials/head') %>
-        <!-- ## HEAD ## -->
-<body>
-    <!-- ### HEADER ### -->
-    <%- include('partials/header') %>
-    <!-- ### HEADER ### -->
+<!-- ## HEAD ## -->
+<%- include('partials/head') %>
+    <!-- ## HEAD ## -->
 
-<main class="register">
-    <form action="/user/storage" method="POST"  enctype="multipart/form-data">
-        <div class="personal-info">
-        <input type="text" id="name" name="name" placeholder="Nombre" class="form-control <%= locals.errors && errors.firstName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.firstName : null %>"> 
-        <% if (locals.errors && errors.firstName) { %>
-            <div class="error-text"><%= errors.firstName.msg %></div>                     
-        <% } %>
-    </div>
-            
-            <div class="personal-info">
-                <input type="text" name="lastName" placeholder="Apellido" class="form-control <%= locals.errors && errors.lastName ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.lastName : null %>"> 
-                <% if (locals.errors && errors.lastName) { %>
-                    <div class="error-text"><%= errors.lastName.msg %></div>                     
-                <% } %>
-            </div>
-            
-            <div class="personal-info">
-                <input type="text" name="email" placeholder="ejemplo@undostres.com" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>"> 
-                <% if (locals.errors && errors.email) { %>
-                    <div class="error-text"><%= errors.email.msg %></div>                     
-                <% } %>
-            </div>
-            <div class="password">
-                <div class="personal-info">
-                    <input type="password" id="password" name="password" placeholder="Creá tu contraseña" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.password : null %>"> 
-                    <% if (locals.errors && errors.password) { %>
-                        <div class="error-text"><%= errors.password.msg %></div>                     
-                    <% } %>
-                </div>
-            </div>
-            <div class="personal-info">
-                <input type="text" id="city" name="city" placeholder="Ciudad" class="form-control"> 
-            </div>
-            <div class="personal-info">
-                <input type="text" id="address" name="address" placeholder="Dirección" class="form-control <%= locals.errors && errors.address ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.address : null %>"> 
-                <% if (locals.errors && errors.address) { %>
-                    <div class="error-text"><%= errors.address.msg %></div>                     
-                <% } %>
-            </div>
-            <div class="personal-info">
-                <input type="text" id="number "name="number" placeholder="Numero" class="form-control"> 
-                
-            </div>
-            <div class="personal-info">
-                <input type="text" id="postal-code" name="postal_code" placeholder="Codigo Postal" class="form-control"> 
-            </div>
-       
+    <body>
+        <!-- ### HEADER ### -->
+        <%- include('partials/header') %>
+            <!-- ### HEADER ### -->
 
-        <div class="campo ">
-            <div class="tag">
-                <label for="description" id="avatar-load"class="form-label">Imagen de perfil:</label>
-                    <input name="image" id="image" class="form-input" type="file">
+            <main class="register">
+                <form action="/user/create" method="POST" enctype="multipart/form-data">
+                    <div class="personal-info">
+                        <input type="text" id="name" name="name" placeholder="Nombre"
+                            class="form-control <%= locals.errors && errors.firstName ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.firstName : null %>">
+                        <% if (locals.errors && errors.firstName) { %>
+                            <div class="error-text">
+                                <%= errors.firstName.msg %>
+                            </div>
+                            <% } %>
+                    </div>
 
-            </div>
-        </div>  
-        <div class="botones">                    
-            <input type="submit" value="Enviar" class="submit">
-            <input type="reset" value="Borrar">
-        </div>
-    </form>
-</main>
+                    <div class="personal-info">
+                        <input type="text" name="lastName" placeholder="Apellido"
+                            class="form-control <%= locals.errors && errors.lastName ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.lastName : null %>">
+                        <% if (locals.errors && errors.lastName) { %>
+                            <div class="error-text">
+                                <%= errors.lastName.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+
+                    <div class="personal-info">
+                        <input type="text" name="email" placeholder="ejemplo@undostres.com"
+                            class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.email : null %>">
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="error-text">
+                                <%= errors.email.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+                    <div class="password">
+                        <div class="personal-info">
+                            <input type="password" id="password" name="password" placeholder="Creá tu contraseña"
+                                class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+                                value="<%= locals.oldData ? oldData.password : null %>">
+                            <% if (locals.errors && errors.password) { %>
+                                <div class="error-text">
+                                    <%= errors.password.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+                    </div>
+                    <div class="personal-info">
+                        <input type="text" id="city" name="city" placeholder="Ciudad" class="form-control">
+                    </div>
+                    <div class="personal-info">
+                        <input type="text" id="address" name="address" placeholder="Dirección"
+                            class="form-control <%= locals.errors && errors.address ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.address : null %>">
+                        <% if (locals.errors && errors.address) { %>
+                            <div class="error-text">
+                                <%= errors.address.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+                    <div class="personal-info">
+                        <input type="text" id="number " name="number" placeholder="Numero" class="form-control">
+
+                    </div>
+                    <div class="personal-info">
+                        <input type="text" id="postal-code" name="postal_code" placeholder="Codigo Postal"
+                            class="form-control">
+                    </div>
+
+                    <div>
+                        <label for="nombre">Administrador:</label>
+                        <input type="checkbox" id="postal-code" name="rolId" placeholder="Usuario" value="1" class="form-control">
+                        <label for="nombre">Visitante:</label>
+                        <input type="checkbox" id="postal-code" name="rolId" placeholder="Usuario" value="2" class="form-control">
+                    </div>
+
+                    <div class="campo ">
+                        <div class="tag">
+                            <label for="description" id="avatar-load" class="form-label">Imagen de perfil:</label>
+                            <input name="image" id="image" class="form-input" type="file">
+
+                        </div>
+                    </div>
+                    <div class="botones">
+                        <input type="submit" value="Enviar" class="submit">
+                        <input type="reset" value="Borrar">
+                    </div>
+                </form>
+            </main>
 
             <!-- ## footer ## -->
             <%- include('partials/footer') %>
-            <!-- ## footer ## -->
-</body>
+                <!-- ## footer ## -->
+    </body>
+
 </html>

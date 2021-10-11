@@ -1,5 +1,3 @@
-
-
 module.exports = (sequelize, DataTypes) => {
     let cols = {
         id: {
@@ -28,7 +26,15 @@ module.exports = (sequelize, DataTypes) => {
         timeStamps: false
     };
 
-    const User_Address = sequelize.define("User_Address", cols, config);
+    const User_Address = sequelize.define("UserAddress", cols, config);
+
+    User_Address.associate = function(models){
+        User_Address.hasMany(models.User, {
+            as: "user",
+            foreignKey: "user_id"
+            });
+       }
+
     return User_Address;
 
 }

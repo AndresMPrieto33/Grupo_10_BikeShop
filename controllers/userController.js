@@ -4,6 +4,9 @@ const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
 const User = require('../models/User');
 
+const db = require('../database/models');
+const sequelize = db.sequelize;
+
 const userFilePath = path.join(__dirname, '../data/users.json');
 const user = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
@@ -95,13 +98,71 @@ const userController = {
         return res.redirect('/user/login');
     },
     
-    
     logout: (req, res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/');
+    },
+    create: (req, res) => {
+        const resutlValidation = validationResult(req);
+
+        if (resutlValidation.errors.length > 0) {
+            return res.render('register', {
+                errors: resutlValidation.mapped(),
+                oldData: req.body
+            });
+        }
+
+
+        let userInDB = User.findByField('email', req.body.email);
+
+
+        if (userInDB) {
+            return res.render('register', {
+                errors: {
+                    email: {
+                        msg: "Este email ya esta registrado"
+                    }
+                },
+                oldData: req.body
+            });
+        }
+
+        db.User.create({
+                
+                name: req.body.name,
+                lastName: req.body.lastName,
+                email: req.body.email,
+                password: bcryptjs.hashSync(req.body.password, 10),
+                avatar: req.file.filename,
+                user_rol_id: req.body.rolId,
+                user_adress: [{
+                    address: req.body.address,
+                    number: req.body.number,
+                    city: req.body.city,
+                    postalCode: req.body.postalCode
+                }]
+            ,
+            
+                include: [{
+                    association: 'User',
+                    include: 'User_Address'
+                }]
+            
+            
+        })
+
+        
+        // agrego then
+        .then(() => {
+            res.redirect('/user/login')
+        })
+        //let userCreated = User.create(userToCreate);
+        //return res.redirect('/user/login');
     }
-}
+        
+    }
+
 
 
 
