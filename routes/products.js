@@ -28,6 +28,6 @@ router.post('/create', upload.single('image'), productsController.create);
 router.post('/delete/:id', productsController.delete);
 router.get('/edit/:id/', productsController.edit);
 router.post('/edit/:id/', upload.single('image'), productsController.updated);
-
+router.get('/search', productsController.search);
 
 module.exports = router;

@@ -1,10 +1,9 @@
 const path = require('path');
 const fs =require('fs');
-//Requiere de la DB
 const db = require('../database/models');
 const { brotliDecompress } = require('zlib');
 const sequelize = db.sequelize;
-
+const Op = db.Sequelize.Op;
 
 const productsFilePath = path.join(__dirname, '../data/productsDB.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -144,7 +143,17 @@ const productsController = {
         });
 
         res.redirect('/products/productsAll');
-    }
+    },
+
+search: (req, res) => {
+    const name = req.query.name;
+    var condition = name ? { name: { [Op.like]: `%${name}%` } } : null;
+    db.Product.findAll({ where: condition })
+        .then(data => {
+            res.render('search', {products: data})
+        })
+        
+        }
 }
 
 

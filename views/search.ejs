@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+        <!-- ## HEAD ## -->
+        
+        <%- include('partials/head') %>
+        <!-- ## HEAD ## -->
+<body>
+        <!--  -->
+        <%- include('partials/header'); %>
+        <!--  -->
+
+        <% for( let i = 0; i < products.length; i++ ) { %> 
+        <section class="detalle-producto">
+                <div class="detalle-img">
+                <a href="/products/detail/<%= products[i].id  %>">
+                <img src="/images/products/<%=  products[i].image %>" alt="Foto de <%= products[i].name %>">
+                </a>
+                </div>
+                <div class="contenedor">
+                <h2><%=  products[i].name %></h2>
+                <ul class="lista">
+                        <p class="lista"><%=  products[i].description %></p>                     
+                        <p>$<%=  products[i].price %></p>
+                </ul> 
+                <div class="boton-comprar-detalle">
+                        <button><a href="/products/cart">Añadir al Carrito</a></button>
+                </div>
+                
+                </div>
+        </section>
+        <% } %>
+        <!-- ## footer ## -->
+        <%- include('partials/footer') %>
+        <!-- ## footer ## -->
+</body>
+</html>
