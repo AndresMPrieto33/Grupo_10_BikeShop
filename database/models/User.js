@@ -47,13 +47,13 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: "user_rol_id"
             });
        }
-
+/* 
     User.associate = function(models){
         User.belongsTo(models.UserAddress, {
             as: "user_address",
             foreignKey: "user_id"
             });
-       }
+       }*/
        
     return User;
 }

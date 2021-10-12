@@ -46,8 +46,8 @@ const userController = require('../controllers/userController');
 router.get('/register', guestMiddleware, userController.register);
 router.post('/storage', upload.single('image'),  userController.storage);
 
-//agrego
-router.post('/create', upload.single('image'),  userController.create);
+router.post('/create', upload.single('image'), userController.create);
+router.get('/detail/:id/', userController.detail);
 
 router.get('/login', guestMiddleware, userController.login);
 router.post('/login', userController.loginProcess);

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+        <!-- ## HEAD ## -->
+        <%- include('partials/head') %>
+        <!-- ## HEAD ## -->
+<body>
+    <!-- ### HEADER ### -->
+    <%- include('partials/header') %>
+    <!-- ### HEADER ### -->
+
+<main class="container">
+    <div>
+        <h2>Bienvenido <%= user.name %>  </h2> 
+        <br>
+        <img src="/images/users/<%=user.avatar%>" alt="Imagen perfil de usuario" width="200px" >
+        <br>
+        <br>
+        <div class="alert-succes"><%= user.email %> </div>
+    </div>
+    <!-- <form action="/user/login" method="POST">
+        <div class="logout">
+            <button>Logout</button>
+        </div>    
+    </form> -->
+
+    
+
+</main>
+
+            <!-- ## footer ## -->
+            <%- include('partials/footer') %>
+            <!-- ## footer ## -->
+</body>
+</html>

@@ -31,3 +31,14 @@ Lo que se hizo mal: Nuevamente estamos desactualizados con las explicaciones y g
 Qué se debe empezar a hacer: Se debe mantener el trello al día, para llevar una mayor organizacion de los pasos a seguir en cada sprint.
 
 Qué se debe dejar de hacer: Se debe dejar de estar desactualizados con las clases y las ejercitaciones del playground.
+
+
+Retrospectiva Sprint 6 
+
+Lo que se hizo bien: En este Sprint en particular tuvimos muchos encuentros en donde continuamos colaborando para solucionar problemas en cuanto a lo que veníamos haciendo. Fueron encuentros cortos y puntuales donde antes de hacer un push nos mostrábamos los cambios o compartíamos diferentes maneras de llegar a objetivos puntuales. 
+
+Lo que se hizo mal: No cumplir con la retrospectiva en tiempo y forma. 
+
+Qué se debe empezar a hacer: Tendríamos que organizar mejor el Trello para tener una metodología de trabajo más ágil.  
+
+Qué se debe dejar de hacer: Tendríamos que comenzar inmediatamente con el sprint siguiente y no dejar unos días entre uno y otro. 
