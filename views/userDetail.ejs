@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+        <!-- ## HEAD ## -->
+        <%- include('partials/head') %>
+        <!-- ## HEAD ## -->
+<body>
+    <!-- ### HEADER ### -->
+    <%- include('partials/header') %>
+    <!-- ### HEADER ### -->
+
+
+    <h2>Bienvenido <%= user.name %>  </h2>
+    <br>
+    <section class="detalle-producto">
+        
+        <div class="detalle-img">
+        <img src="/images/users/<%=  user.avatar %>" alt="Foto de <%= user.name %>">
+        </div>
+        <div class="contenedor">
+        <h2><%=  user.name %></h2>
+        <ul class="lista">
+                <p class="lista"><%=  user.email %></p>                     
+        </ul> 
+        
+        <div class="boton-comprar-detalle">
+                <button><a href="/user/edit/<%= user.id %> ">Editar usuario</a></button>
+        </div>
+
+        </div>
+</section>
+   
+</main>
+
+            <!-- ## footer ## -->
+            <%- include('partials/footer') %>
+            <!-- ## footer ## -->
+</body>
+</html>

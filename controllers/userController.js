@@ -15,33 +15,26 @@ const userController = {
         console.log(req.cookies.userEmail);
         return res.render('register');
     },
-
     login: (req, res) => {
         res.render('login')
     },
-    
     profile: (req, res) => {
         res.render('userProfile', {
             user: req.session.userLogged
         });
     },
-
     loginProcess: (req, res) => {
         let userToLogin = User.findByField('email', req.body.email);
-
         if (userToLogin) {
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkThePassword) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
-
                 if (req.body.remember_user) {
-                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60)})
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) })
                 }
-
                 return res.redirect('/user/profile');
             }
-            
             return res.render('login', {
                 errors: {
                     email: {
@@ -50,8 +43,6 @@ const userController = {
                 }
             });
         }
-
-
         return res.render('login', {
             errors: {
                 email: {
@@ -60,21 +51,15 @@ const userController = {
             }
         });
     },
-    
     storage: (req, res) => {
         const resutlValidation = validationResult(req);
-
         if (resutlValidation.errors.length > 0) {
             return res.render('register', {
                 errors: resutlValidation.mapped(),
                 oldData: req.body
             });
         }
-
-
         let userInDB = User.findByField('email', req.body.email);
-
-
         if (userInDB) {
             return res.render('register', {
                 errors: {
@@ -85,19 +70,14 @@ const userController = {
                 oldData: req.body
             });
         }
-
-
         let userToCreate = {
             ...req.body,
             password: bcryptjs.hashSync(req.body.password, 10),
             image: req.file.filename
-
         }
-        
         let userCreated = User.create(userToCreate);
         return res.redirect('/user/login');
     },
-    
     logout: (req, res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
@@ -105,18 +85,13 @@ const userController = {
     },
     create: (req, res) => {
         const resutlValidation = validationResult(req);
-
         if (resutlValidation.errors.length > 0) {
             return res.render('register', {
                 errors: resutlValidation.mapped(),
                 oldData: req.body
             });
         }
-
-
         let userInDB = User.findByField('email', req.body.email);
-
-
         if (userInDB) {
             return res.render('register', {
                 errors: {
@@ -127,44 +102,72 @@ const userController = {
                 oldData: req.body
             });
         }
-
         db.User.create({
-                
-                name: req.body.name,
-                lastName: req.body.lastName,
-                email: req.body.email,
-                password: bcryptjs.hashSync(req.body.password, 10),
-                avatar: req.file.filename,
-                user_rol_id: 2,
-                user_adress: [{
-                    address: req.body.address,
-                    number: req.body.number,
-                    city: req.body.city,
-                    postalCode: req.body.postalCode
-                }]
+            name: req.body.name,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            avatar: req.file.filename,
+            user_rol_id: 2,
+            user_adress: [{
+                address: req.body.address,
+                number: req.body.number,
+                city: req.body.city,
+                postalCode: req.body.postalCode
+            }]
             ,
-            
-                include: [{
-                    association: 'User',
-                    include: 'User_Address'
-                }]
-            
-            
+            include: [{
+                association: 'User',
+                include: 'User_Address'
+            }]
         })
+            // agrego then
+            .then(() => {
+                res.redirect('/user/login')
+            })
 
-        
-        // agrego then
-        .then(() => {
-            res.redirect('/user/login')
+    },
+    detail: (req, res) => {
+        db.User.findByPk(req.params.id)
+            .then(user => {
+                res.render('userDetail', { user: user })
+            })
+    },
+    edit: (req, res) => {
+        db.User.findByPk(req.params.id)
+        .then(function (user) {
+            res.render('userEdit', {user});
         })
-        //let userCreated = User.create(userToCreate);
-        //return res.redirect('/user/login');
+    },
+    updated: (req, res) => {
+        db.User.update({
+        name: req.body.name,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        password: req.body.password,
+        avatar: req.file.filename,
+        user_rol_id: 2,
+        user_adress: [{
+            address: req.body.address,
+            number: req.body.number,
+            city: req.body.city,
+            postalCode: req.body.postalCode
+        }]
+        ,
+        include: [{
+            association: 'User',
+            include: 'User_Address'
+        }]
+    }, {
+        where: {
+            id: req.params.id
+        }
+    });
+
+        res.redirect('/user/detail/' + req.params.id);
     }
-        
-    }
+    
 
 
-
-
-
+}
 module.exports = userController;

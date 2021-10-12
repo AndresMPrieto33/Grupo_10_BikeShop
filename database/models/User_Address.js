@@ -4,11 +4,11 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             primaryKey: true,
             allowNull: false
-        },
+        }/*,
         user_id: {
             type: DataTypes.INTEGER,
             allowNull: false
-        },
+        }*/,
         number: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -28,13 +28,12 @@ module.exports = (sequelize, DataTypes) => {
 
     const User_Address = sequelize.define("UserAddress", cols, config);
 
-    User_Address.associate = function(models){
-        User_Address.hasMany(models.User, {
+/*     User_Address.associate = function(models){
+       User_Address.hasMany(models.User, {
             as: "user",
             foreignKey: "user_id"
             });
-       }
+       }*/
 
     return User_Address;
-
 }
