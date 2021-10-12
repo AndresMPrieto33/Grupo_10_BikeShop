@@ -52,6 +52,9 @@ router.get('/detail/:id/', userController.detail);
 router.get('/login', guestMiddleware, userController.login);
 router.post('/login', userController.loginProcess);
 
+router.get('/edit/:id/', userController.edit);
+router.post('/edit/:id/', upload.single('avatar'), userController.updated);
+
 router.get('/profile', authMiddleware, userController.profile);
 router.get('/logout', userController.logout);
 

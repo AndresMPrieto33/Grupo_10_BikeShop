@@ -132,6 +132,42 @@ const userController = {
             .then(user => {
                 res.render('userDetail', { user: user })
             })
+    },
+    edit: (req, res) => {
+        db.User.findByPk(req.params.id)
+        .then(function (user) {
+            res.render('userEdit', {user});
+        })
+    },
+    updated: (req, res) => {
+        db.User.update({
+        name: req.body.name,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        password: req.body.password,
+        avatar: req.file.filename,
+        user_rol_id: 2,
+        user_adress: [{
+            address: req.body.address,
+            number: req.body.number,
+            city: req.body.city,
+            postalCode: req.body.postalCode
+        }]
+        ,
+        include: [{
+            association: 'User',
+            include: 'User_Address'
+        }]
+    }, {
+        where: {
+            id: req.params.id
+        }
+    });
+
+        res.redirect('/user/detail/' + req.params.id);
     }
+    
+
+
 }
 module.exports = userController;

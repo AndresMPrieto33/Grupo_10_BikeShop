@@ -8,23 +8,27 @@
     <%- include('partials/header') %>
     <!-- ### HEADER ### -->
 
-<main class="container">
-    <div>
-        <h2>Bienvenido <%= user.name %>  </h2> 
-        <br>
-        <img src="/images/users/<%=user.avatar%>" alt="Imagen perfil de usuario" width="200px" >
-        <br>
-        <br>
-        <div class="alert-succes"><%= user.email %> </div>
-    </div>
-    <!-- <form action="/user/login" method="POST">
-        <div class="logout">
-            <button>Logout</button>
-        </div>    
-    </form> -->
 
-    
+    <h2>Bienvenido <%= user.name %>  </h2>
+    <br>
+    <section class="detalle-producto">
+        
+        <div class="detalle-img">
+        <img src="/images/users/<%=  user.avatar %>" alt="Foto de <%= user.name %>">
+        </div>
+        <div class="contenedor">
+        <h2><%=  user.name %></h2>
+        <ul class="lista">
+                <p class="lista"><%=  user.email %></p>                     
+        </ul> 
+        
+        <div class="boton-comprar-detalle">
+                <button><a href="/user/edit/<%= user.id %> ">Editar usuario</a></button>
+        </div>
 
+        </div>
+</section>
+   
 </main>
 
             <!-- ## footer ## -->
