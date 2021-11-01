@@ -31,6 +31,15 @@
     border-radius: 4px;
     border: none;
 }
+.error-text{
+    color: crimson;
+}
+.error{
+    background-color: rgb(253, 203, 213);
+}
+.ok{
+    color:darkgreen
+}
 
 @media (min-width: 768px) {
 .register{

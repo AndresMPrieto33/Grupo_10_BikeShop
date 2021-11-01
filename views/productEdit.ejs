@@ -10,11 +10,12 @@
 
         <section>
             <article class="container">
-                <form action="/products/edit/<%= products.id %> " method="POST" enctype="multipart/form-data">
+                <form class="form" action="/products/edit/<%= products.id %> " method="POST" enctype="multipart/form-data">
                     <div class="campo">
                         <div class="tag">
                             <label for="name" class="form-label">Nombre del producto:</label>
                                 <input type="text" id="name" name="name" value="<%= products.name %>" class="form-input">
+                                <div class="errorName"></div>
                         </div>                        
                     </div>
                     
@@ -22,6 +23,7 @@
                         <div class="tag">
                             <label for="name" class="form-label">Precio:</label>
                                 <input type="text" id="price" name="price" value="<%= products.price %>" class="form-input">
+                                <div class="errorName"></div>
                         </div>                        
                     </div>
                     <div class="campo">
@@ -52,7 +54,8 @@
                     <div class="campo">
                         <div class="tag">
                             <label for="name" class="form-label">Descripcion del producto:</label>
-                                <input type="text" id="description" name="description" value="<%= products.description %>" class="form-input">                    
+                                <input type="text" id="description" name="description" value="<%= products.description %>" class="form-input"> 
+                                <div class="errorDescription"></div>                   
                         </div>                        
                     </div>
                     <div class="campo">
@@ -84,6 +87,9 @@
         <!-- ## footer## -->
         <%- include('partials/footer') %>
         <!-- ## footer## -->
+
+
+        <script src="/js/productEditValidation.js"></script>
     
 </body>
 </html>

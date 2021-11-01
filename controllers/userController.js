@@ -44,11 +44,11 @@ const userController = {
             });
         }
         return res.render('login', {
-            errors: {
-                email: {
-                    msg: 'No se encuentra este email en nuestra base de datos'
-                }
-            }
+            // errors: {
+            //     email: {
+            //         msg: 'No se encuentra este email en nuestra base de datos'
+            //     }
+            // }
         });
     },
     storage: (req, res) => {

@@ -5,40 +5,42 @@
     <!-- ## HEAD ## -->
 
     <body>
+        <script src="/js/registerValidation.js"></script>
         <!-- ### HEADER ### -->
         <%- include('partials/header') %>
             <!-- ### HEADER ### -->
 
             <main class="register">
-                <form action="/user/create" method="POST" enctype="multipart/form-data">
+                <form id="form" id="register" action="/user/create" method="POST" enctype="multipart/form-data">
                     <div class="personal-info">
                         <input type="text" id="name" name="name" placeholder="Nombre"
                             class="form-control <%= locals.errors && errors.firstName ? 'is-invalid' : null %>"
                             value="<%= locals.oldData ? oldData.firstName : null %>">
                         <% if (locals.errors && errors.firstName) { %>
-                            <div class="error-text">
+                            <div class="error-text errorName">
                                 <%= errors.firstName.msg %>
                             </div>
                             <% } %>
+                            
                     </div>
 
                     <div class="personal-info">
-                        <input type="text" name="lastName" placeholder="Apellido"
+                        <input type="text" id="lastName" name="lastName" placeholder="Apellido"
                             class="form-control <%= locals.errors && errors.lastName ? 'is-invalid' : null %>"
                             value="<%= locals.oldData ? oldData.lastName : null %>">
                         <% if (locals.errors && errors.lastName) { %>
-                            <div class="error-text">
+                            <div class="error-text errorLName">
                                 <%= errors.lastName.msg %>
                             </div>
                             <% } %>
                     </div>
 
                     <div class="personal-info">
-                        <input type="text" name="email" placeholder="ejemplo@undostres.com"
+                        <input type="text" id="email" name="email" placeholder="ejemplo@undostres.com"
                             class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
                             value="<%= locals.oldData ? oldData.email : null %>">
                         <% if (locals.errors && errors.email) { %>
-                            <div class="error-text">
+                            <div class="error-text errorEmail">
                                 <%= errors.email.msg %>
                             </div>
                             <% } %>
@@ -49,39 +51,41 @@
                                 class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
                                 value="<%= locals.oldData ? oldData.password : null %>">
                             <% if (locals.errors && errors.password) { %>
-                                <div class="error-text">
+                                <div class="error-text errorPassword">
                                     <%= errors.password.msg %>
                                 </div>
-                                <% } %>
+                                <% } %>                                
                         </div>
                     </div>
                     <div class="personal-info">
                         <input type="text" id="city" name="city" placeholder="Ciudad" class="form-control">
+                        <div class="error-text errorCity"></div>
                     </div>
                     <div class="personal-info">
                         <input type="text" id="address" name="address" placeholder="Dirección"
                             class="form-control <%= locals.errors && errors.address ? 'is-invalid' : null %>"
                             value="<%= locals.oldData ? oldData.address : null %>">
                         <% if (locals.errors && errors.address) { %>
-                            <div class="error-text">
+                            <div class="error-text errorAddress">
                                 <%= errors.address.msg %>
                             </div>
                             <% } %>
                     </div>
                     <div class="personal-info">
                         <input type="text" id="number " name="number" placeholder="Numero" class="form-control">
-
+                        <div class="error-text errorNumber"></div>
                     </div>
                     <div class="personal-info">
                         <input type="text" id="postal-code" name="postal_code" placeholder="Codigo Postal"
                             class="form-control">
+                            <div class="error-text errorPostalCode"></div>
                     </div>
 
                     <div class="campo ">
                         <div class="tag">
                             <label for="description" id="avatar-load" class="form-label">Imagen de perfil:</label>
                             <input name="image" id="image" class="form-input" type="file">
-
+                            <div class="error-text errorAvatar"></div>
                         </div>
                     </div>
                     <div class="botones">
@@ -94,6 +98,8 @@
             <!-- ## footer ## -->
             <%- include('partials/footer') %>
                 <!-- ## footer ## -->
+
+            
     </body>
 
 </html>

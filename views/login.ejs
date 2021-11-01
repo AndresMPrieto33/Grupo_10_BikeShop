@@ -7,18 +7,20 @@
         <!-- ### HEADER ### -->
         <%- include('partials/header') %>
         <!-- ### HEADER ### -->
+        
         <main class="login">
-            <form action="/user/login" method="POST">
+            <form id="form" action="/user/login" method="POST">
                 <div class="user">
-                    <input type="text" name="email" placeholder="Email" required>
+                    <input type="text" id="email" name="email" placeholder="Email" >
                     <% if (locals.errors && errors.email) { %>
-                        <div class="error-text">
+                        <div class="error-text errorEmail">
                             <%= errors.email.msg %> 
                         </div>
                     <% } %>
-                    <br>
-                    <input type="password" name="password" placeholder="Ingresá tu contraseña" required>
-                    <br>
+
+                    <!-- <br> -->
+                    <input type="password" id="password" name="password" placeholder="Ingresá tu contraseña" >
+                    <!-- <br> -->
                 </div>
                 <div class="recordarme">
                     <label for="">
@@ -35,5 +37,7 @@
                 <!-- ## footer ## -->
                 <%- include('partials/footer') %>
                 <!-- ## footer ## -->
+
+                <script src="/js/loginValidation.js"></script>
 </body>
 </html>

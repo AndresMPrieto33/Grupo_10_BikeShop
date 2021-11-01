@@ -26,11 +26,12 @@
         
         <section>
             <div class="container">
-                <form action="/products/create" method="POST" enctype="multipart/form-data">
+                <form id="form" action="/products/create" method="POST" enctype="multipart/form-data">
                     <div class="campo">
                         <div class="tag">
                             <label for="name" class="form-label">Nombre del producto:</label>
                                 <input type="text" id="name" name="name" placeholder="Ej: Bicicleta Venzo" class="form-input">
+                                <div class="errorName"></div>
                         </div>                        
                     </div>
                     
@@ -69,7 +70,8 @@
                     <div class="campo">
                         <div class="tag">
                             <label for="description" class="form-label">Descripcion del producto:</label>
-                                <input type="text" id="description" name="description" placeholder="Una Super Bici" class="form-input">                    
+                                <input type="text" id="description" name="description" placeholder="Una Super Bici" class="form-input">
+                                <div class="errorDescription"></div>                    
                         </div>                        
                     </div>
                     <div class="campo">
@@ -100,5 +102,6 @@
             </div>
         </section>
     </main>
+    <script src="/js/productCreateValidaton.js"></script>
 </body>
 </html>
