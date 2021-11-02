@@ -31,6 +31,18 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             //allowNull: false,
             underscored: true
+        },
+        address: {
+            type: DataTypes.STRING
+        },
+        number: {
+            type: DataTypes.INTEGER
+        },
+        city: {
+            type: DataTypes.STRING
+        },
+        postal_code: {
+            type:DataTypes.STRING
         }
     };
 
@@ -48,12 +60,7 @@ module.exports = (sequelize, DataTypes) => {
             });
         }
 
-    User.associate = function(models){
-        User.belongsTo(models.UserAddress, {
-            as: "user_address",
-            foreignKey: "user_id"
-            });
-        }
+
 
     return User;
 }

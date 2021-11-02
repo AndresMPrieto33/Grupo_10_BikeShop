@@ -118,22 +118,18 @@ const userController = {
             password: bcryptjs.hashSync(req.body.password, 10),
             avatar:  req.file ? req.file.filename : '',
             user_rol_id: 2,
-            user_adress: [{
-                address: req.body.address,
-                number: req.body.number,
-                city: req.body.city,
-                postalCode: req.body.postalCode
-            }]
-            ,
-            include: [{
-                association: 'User',
-                include: 'User_Address'
-            }]
+            address: req.body.address,
+            number: req.body.number,
+            city: req.body.city,
+            postal_Code: req.body.postal_Code
+
+            
+            
         })
             // agrego then
             .then(() => {
                 res.redirect('/user/login')
-            })
+        })
 
     },
     detail: (req, res) => {
@@ -156,17 +152,11 @@ const userController = {
         password: req.body.password,
         avatar: req.file.filename,
         user_rol_id: 2,
-        user_adress: [{
-            address: req.body.address,
-            number: req.body.number,
-            city: req.body.city,
-            postalCode: req.body.postalCode
-        }]
-        ,
-        include: [{
-            association: 'User',
-            include: 'User_Address'
-        }]
+        address: req.body.address,
+        number: req.body.number,
+        city: req.body.city,
+        postal_Code: req.body.postal_Code
+
     }, {
         where: {
             id: req.params.id
