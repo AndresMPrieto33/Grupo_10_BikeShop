@@ -25,6 +25,15 @@ const userController = {
     },
     loginProcess: (req, res) => {
         let userToLogin = User.findByField('email', req.body.email);
+        if (req.body.email == "") {
+            return res.render('login', {
+                errors: {
+                    email: {
+                        msg: 'Debes ingresar un email'
+                    }
+                }
+            });
+        }
         if (userToLogin) {
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkThePassword) {
@@ -44,11 +53,11 @@ const userController = {
             });
         }
         return res.render('login', {
-            // errors: {
-            //     email: {
-            //         msg: 'No se encuentra este email en nuestra base de datos'
-            //     }
-            // }
+            errors: {
+                email: {
+                    msg: 'No se encuentra este email en nuestra base de datos'
+                }
+            }
         });
     },
     storage: (req, res) => {
@@ -73,7 +82,7 @@ const userController = {
         let userToCreate = {
             ...req.body,
             password: bcryptjs.hashSync(req.body.password, 10),
-            image: req.file.filename
+            file: req.file
         }
         let userCreated = User.create(userToCreate);
         return res.redirect('/user/login');
@@ -107,7 +116,7 @@ const userController = {
             lastName: req.body.lastName,
             email: req.body.email,
             password: bcryptjs.hashSync(req.body.password, 10),
-            avatar: req.file.filename,
+            avatar:  req.file ? req.file.filename : '',
             user_rol_id: 2,
             user_adress: [{
                 address: req.body.address,
