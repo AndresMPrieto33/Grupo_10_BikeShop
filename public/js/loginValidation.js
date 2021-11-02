@@ -25,7 +25,7 @@ window.onload = function(){
             password.classList.add('error');
             errorPassword.innerHTML = 'debe tener al menos 8 caracteres';
         }else{
-            password-classList.add('ok');
+            password.classList.add('ok');
             password.classList.remove('error');
             errorPassword.innerHTML = "";
         }
