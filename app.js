@@ -34,4 +34,4 @@ app.use('/', mainRouter);
 app.use('/user', userRouter);
 app.use('/products', productsRouter);
 
-app.listen(3001, () => console.log('servidor corriendo en el puerto 3000'));
+app.listen(3000, () => console.log('servidor corriendo en el puerto 3000'));

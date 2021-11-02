@@ -2,7 +2,7 @@ window.onload = function(){
     
     const form = document.querySelector('#form');    
     form.name.focus();
-    form.name.classList.add('error');
+    //form.name.classList.add('error');
 
     form.addEventListener("submit", function(e){
         const esNumero = /^[0-9]+$/;
@@ -31,10 +31,10 @@ window.onload = function(){
         
         const errores = [];
 
-        //name.classList.add('error');
+        name.classList.add('error');
         // lastName.classList.add('error');
         // email.classList.add('error');
-        // password.classList.add('error');
+        password.classList.add('error');
         // city.classList.add('error'); 
         // address.classList.add('error'); 
         // number.classList.add('error'); 
@@ -127,7 +127,7 @@ window.onload = function(){
 
 
         if(errores.length > 0){
-            e.preventDefault();s
+            e.preventDefault();
         }
 
 

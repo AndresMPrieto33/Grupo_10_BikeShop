@@ -121,7 +121,7 @@ const userController = {
             address: req.body.address,
             number: req.body.number,
             city: req.body.city,
-            postal_Code: req.body.postal_Code
+            postal_code: req.body.postal_code
 
             
             
@@ -155,7 +155,7 @@ const userController = {
         address: req.body.address,
         number: req.body.number,
         city: req.body.city,
-        postal_Code: req.body.postal_Code
+        postal_code: req.body.postal_code
 
     }, {
         where: {
