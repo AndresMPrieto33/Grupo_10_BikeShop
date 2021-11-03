@@ -23,17 +23,24 @@ const userController = {
             user: req.session.userLogged
         });
     },
-    loginProcess: (req, res) => {
-        let userToLogin = User.findByField('email', req.body.email);
-        if (req.body.email == "") {
-            return res.render('login', {
-                errors: {
-                    email: {
-                        msg: 'Debes ingresar un email'
-                    }
-                }
-            });
-        }
+    loginProcess: async (req, res) => {
+        // let userToLogin = User.findByField('email', req.body.email);
+        // if (req.body.email == "") {
+        //     return res.render('login', {
+        //         errors: {
+        //             email: {
+        //                 msg: 'Debes ingresar un email'
+        //             }
+        //         }
+        //     });
+        // }
+        let userToLogin = await db.User.findOne({
+            where: {
+                email: req.body.email
+            }
+        })
+
+
         if (userToLogin) {
             let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkThePassword) {

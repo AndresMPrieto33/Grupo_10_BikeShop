@@ -3,8 +3,8 @@
         <nav>
             <ul class="login">
                 <% if (locals.isLogged) { %>
-                    <img src="/images/users/<%= locals.userLogged.image %>" alt="Imagen foto de perfil" width="40" style="border-radius: 50%">
-                    Hola, <%= locals.userLogged.firstName + " " + locals.userLogged.lastName %>
+                    <img src="/images/users/<%= locals.userLogged.avatar %>" alt="Imagen foto de perfil" width="40" style="border-radius: 50%">
+                    Hola, <%= locals.userLogged.name + " " + locals.userLogged.lastName %>
 
                     <li><a href="/user/profile"><i class="fas fa-portrait"></i></a></li>
                     <li><a href="/user/logout">logout</a></li> 
