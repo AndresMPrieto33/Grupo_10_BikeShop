@@ -24,6 +24,7 @@
                                 <%= errors.name.msg %>
                             </div>
                             <% } %>
+                            <div class="errorName"></div>
                     </div>
 
                     <div class="personal-info">
@@ -35,6 +36,7 @@
                                 <%= errors.lastName.msg %>
                             </div>
                             <% } %>
+                            <div class="errorLName"></div>
                     </div>
 
                     <div class="personal-info">
@@ -46,6 +48,7 @@
                                 <%= errors.email.msg %>
                             </div>
                             <% } %>
+                            <div class="errorEmail"></div>
                     </div>
                     <div class="password">
                         <div class="personal-info">
@@ -58,6 +61,7 @@
                                     <%= errors.password.msg %>
                                 </div>
                                 <% } %>
+                                <div class="errorPassword"></div>
                         </div>
                     </div>
                     <div class="personal-info">
@@ -69,6 +73,7 @@
                                 <%= errors.city.msg %>
                             </div>
                             <% } %>
+                            <div class="errorCity"></div>
                     </div>
                     <div class="personal-info">
                         <input type="text" id="address" name="address" placeholder="Dirección"
@@ -79,9 +84,10 @@
                                 <%= errors.address.msg %>
                             </div>
                             <% } %>
+                            <div class="errorAddress"></div>
                     </div>
                     <div class="personal-info">
-                        <input type="text" id="number " name="number" placeholder="Numero"
+                        <input type="text" id="number" name="number" placeholder="Numero"
                             class="form-control <%= locals.errors && errors.number ? 'is-invalid' : null %>"
                             value="<%= locals.oldData ? oldData.number : null %>">
                         <% if (locals.errors && errors.number) { %>
@@ -89,6 +95,7 @@
                                 <%= errors.number.msg %>
                             </div>
                             <% } %>
+                            <div class="errorNumber"></div>
                     </div>
                     <div class="personal-info">
                         <input type="text" id="postal-code" name="postal_code" placeholder="Codigo Postal"
@@ -99,6 +106,7 @@
                                 <%= errors.postal_code.msg %>
                             </div>
                             <% } %>
+                            <div class="errorPostalCOde"></div>
                     </div>
 
                     <div class="campo ">
@@ -114,6 +122,7 @@
                                             <%= errors.avatar.msg %>
                                         </div>
                                         <% } %>
+                                        <div class="errorAvatar"></div>
                         </div>
                     </div>
                     <div class="botones">

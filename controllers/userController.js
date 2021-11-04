@@ -12,7 +12,7 @@ const user = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
 const userController = {
     register: (req, res) => {
-        console.log(req.cookies.userEmail);
+        //console.log(req.cookies.userEmail);
         return res.render('register');
     },
     login: (req, res) => {

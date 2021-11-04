@@ -96,7 +96,7 @@ const productsController = {
             res.redirect('/')
         })
         .catch((error)=>{
-            console.log(error);
+            //console.log(error);
         })
     },
     delete: (req, res) => {

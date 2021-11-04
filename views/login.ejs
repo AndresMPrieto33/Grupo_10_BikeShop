@@ -22,12 +22,12 @@
                     <br>
                     <input id="password" type="password" name="password" placeholder="Ingresá tu contraseña"    
                     class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
-                     value="<%= locals.oldData ? oldData.password : null %>">
+                    value="<%= locals.oldData ? oldData.password : null %>">
                         <% if (locals.errors && errors.password) { %>
-                           <div class="error-text" style="color: red;">
-                              <%= errors.password.msg %>
-                             </div>
-                         <% } %>
+                            <div class="error-text" style="color: red;">
+                                <%= errors.password.msg %>
+                            </div>
+                        <% } %>
                     <br>
                 </div>
                 <div class="recordarme">
