@@ -1,7 +1,9 @@
 const path = require('path');
 const fs =require('fs');
 const db = require('../database/models');
+const { validationResult } = require('express-validator');
 const { brotliDecompress } = require('zlib');
+const Product = require('../database/models/Product');
 const sequelize = db.sequelize;
 const Op = db.Sequelize.Op;
 
@@ -79,6 +81,14 @@ const productsController = {
 		res.render('productCreate');
 	},
     create: (req, res) => {
+        const resutlValidation = validationResult(req);
+        if (resutlValidation.errors.length > 0) {
+            return res.render('productCreate', {
+                errors: resutlValidation.mapped(),
+                oldData: req.body
+            });
+        }
+
         let newProduct = req.body;
         db.Product.create({
             name: req.body.name,
@@ -114,6 +124,13 @@ const productsController = {
         */
     },
     edit: (req, res) => {
+        const resutlValidation = validationResult(req);
+        if (resutlValidation.errors.length > 0) {
+            return res.render('productCreate', {
+                errors: resutlValidation.mapped(),
+                oldData: req.body
+            });
+        }
         db.Product.findByPk(req.params.id)
         .then(function (products) {
             res.render('productEdit', {products: products});

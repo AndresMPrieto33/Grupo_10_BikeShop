@@ -31,6 +31,13 @@
     border-radius: 4px;
     border: none;
 }
+.campo .tag option{
+    padding: 5px;
+    background-color: rgb(45, 45, 124);
+    color: white;
+    border-radius: 4px;
+    border: none;
+}
 .error-text{
     color: crimson;
 }
