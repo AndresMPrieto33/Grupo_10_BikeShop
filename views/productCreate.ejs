@@ -6,7 +6,7 @@
 
 <body>
     <main class="register">
-
+        <h2>CREACION DE PRODUCTOS</h2>
         <form id="form" action="/products/create" method="POST" enctype="multipart/form-data" class="register-form">
                 
             <div class="personal-info">
@@ -18,6 +18,7 @@
                             <%= errors.name.msg %>
                         </div>
                         <% } %>
+                        <div class="errorName error-text"></div>
                 </div>
             
 
@@ -93,12 +94,13 @@
                         <%= errors.description.msg %>
                     </div>
                     <% } %>
+                    <div class="errorDescription error-text"></div>
                 </div>
             
             
                 <div class="campo">
                     <div class="tag">
-                        <label for="description" id="avatar-load" class="form-label">Imagen del producto:</label>
+                        <label for="imagen" id="avatar-load" class="form-label">Imagen del producto:</label>
                     <input name="image" id="image" class="form-input" type="file">
                     </div>
                     <br>
@@ -109,6 +111,7 @@
                         <%= errors.image.msg %>
                     </div>
                     <% } %>
+                    <div class="errorFile error-text"></div>
                 </div>
             
             <div class="options">
