@@ -3,24 +3,28 @@ window.onload = function(){
     form.email.focus();
 
     form.addEventListener("submit", (e) => {
+        // e.preventDefault();
         const esEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
         const email = document.querySelector('#email');
         const password = document.querySelector('#password');
 
-        const errors = [];
+        const errorEmail = document.querySelector('.errorEmail');
+        const errorPassword = document.querySelector('.errorPassword')
+
+        const errores = [];
 
         if(email.value.match(esEmail)){
             email.classList.add('ok');
             email.classList.remove('error');
             errorEmail.innerHTML = ""
         }else{
-            errors.push('debes ingresar un tipo de email valido');
+            errores.push('debes ingresar un tipo de email valido');
             errorEmail.innerHTML = 'debes ingresar un tipo de email valido';
             email.classList.add('error');
-            console.log(errors);
+            console.log(errores);
         }
-        if(password.value.length < 8){
+        if(password.value == "" || password.value.length < 8){
             errores.push('debe tener al menos 8 caracteres');
             password.classList.add('error');
             errorPassword.innerHTML = 'debe tener al menos 8 caracteres';
@@ -30,8 +34,8 @@ window.onload = function(){
             errorPassword.innerHTML = "";
         }
 
-
-        if(errors.length > 0){
+        console.log(errores)
+        if(errores.length > 0){
             e.preventDefault();
         }
     })

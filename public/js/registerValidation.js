@@ -5,7 +5,7 @@ window.onload = function(){
     //form.name.classList.add('error');
 
     form.addEventListener("submit", function(e){
-        e.preventDefault();
+        // e.preventDefault();
         
         const esNumero = /^[0-9]+$/;
         const esEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -60,16 +60,16 @@ window.onload = function(){
             errores.push('debes ingresar un tipo de email valido');
             errorEmail.innerHTML = 'debes ingresar un tipo de email valido';
             email.classList.add('error');
-            console.log(errors);
+            console.log(errores);
         }
-        if(password.value < 8){
+        if(password.value == "" ||password.value.length < 8){
             errores.push('debe tener al menos 8 caracteres');
             password.classList.add('error');
             errorPassword.innerHTML = 'debe tener al menos 8 caracteres';
         }else{
             password.classList.add('ok');
             password.classList.remove('error');
-            errorPassword.innerHTML = "correcto";
+            errorPassword.innerHTML = "";
         }
         if(city.value == "" || city.value.length < 3){
             errores.push('debe contener al menos 3 caracteres');
@@ -99,16 +99,7 @@ window.onload = function(){
             number.classList.add('error');
             console.log(errores);
         }
-        // if(number.value == ""){
-        //     errores.push('debes ingresar un numero');
-        //     errorNumber.innerHTML = 'debes ingresar un numero';
-        //     number.classList.add('error');
-        //     console.log(errores);
-        // }else{
-        //     number.classList.add('ok');
-        //     number.classList.remove('error');
-        //     errorNumber.innerHTML = "correcto";
-        // }
+
         if(postalCode.value.length < 3 || postalCode.value == ""){
             errores.push('debe contener al menos 3 caracteres');
             postalCode.classList.add('error');
@@ -117,7 +108,7 @@ window.onload = function(){
         }else{
             postalCode.classList.add('ok');
             postalCode.classList.remove('error');
-            // errorPostalCode.innerHTML = "";
+            errorPostalCode.innerHTML = "";
         }
         // if(!allowedExtensions.exec(file.value)){
         //     errores.push('ingrese un archivo con extencion valida');

@@ -9,7 +9,7 @@
         <!-- ### HEADER ### -->
         
         <main class="login">
-            <form action="/user/login" method="POST">
+            <form id="form" action="/user/login" method="POST">
                 <div class="user">
                     <input id="email" type="email" name="email" placeholder="Email" 
                     class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
@@ -19,6 +19,7 @@
                             <%= errors.email.msg %> 
                         </div>
                     <% } %>
+                    <div class="errorEmail error-text"></div>
                     <br>
                     <input id="password" type="password" name="password" placeholder="Ingresá tu contraseña"    
                     class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
@@ -28,6 +29,7 @@
                                 <%= errors.password.msg %>
                             </div>
                         <% } %>
+                        <div class="errorPassword error-text"></div>
                     <br>
                 </div>
                 <div class="recordarme">
