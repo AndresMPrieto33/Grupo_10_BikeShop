@@ -8,7 +8,7 @@ module.exports = {
                 .then(products => {
                     return res.status(200).json({
                         meta:{
-                            stauts: 200,
+                            status: 200,
                             totalResults: products.length,
                             url: 'api/products/'
                         },
@@ -16,5 +16,19 @@ module.exports = {
                     });                    
                 })
                 .catch(error => res.json(error));
-    }
+    },
+    detail: (req, res) => {
+        db.Product 
+                .findByPk(req.params.id)
+                .then(products => {
+                    return res.status(200).json({
+                        meta:{
+                            status: 200,
+                            url: 'api/products/:id'
+                        },
+                        data: products
+                    });                    
+                })
+                .catch(error => res.json(error));
+    },
 }

@@ -30,11 +30,13 @@ const mainRouter = require('./routes/main');
 const userRouter = require('./routes/user');
 const productsRouter = require('./routes/products');
 const apiProductsRouter = require('./routes/api_routes/apiProductsRoute');
+const apiUserRouter = require('./routes/api_routes/apiUsersRoute');
 
 app.use('/', mainRouter);
 app.use('/user', userRouter);
 app.use('/products', productsRouter);
 
 app.use('/api/products', apiProductsRouter);
+// app.use('/api/users', apiUserRouter);
 
 app.listen(3000, () => console.log('servidor corriendo en el puerto 3000'));
