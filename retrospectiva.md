@@ -42,3 +42,13 @@ Lo que se hizo mal: No cumplir con la retrospectiva en tiempo y forma.
 Qué se debe empezar a hacer: Tendríamos que organizar mejor el Trello para tener una metodología de trabajo más ágil.  
 
 Qué se debe dejar de hacer: Tendríamos que comenzar inmediatamente con el sprint siguiente y no dejar unos días entre uno y otro. 
+
+Restrospectiva Sprint 7
+
+Lo que se hizo bien: Continuamos hablando todos los dias, intentando ayudarnos con lo que el otro tiene asignado como tarea.
+
+Lo que se hizo mal: Tenemos que analizar mejor los puntos de los sprints para ordenarlos del mas importante al menos importante.
+
+Lo que se debe empezar a hacer: Continuamos sin aprovechar las facilidades que nos entrega el Trello para la organizacion de tareas.
+
+Lo que se debe dejar de hacer: Tenemos que dejar de dividir las tareas sin antes analizarlas como corresponde.
