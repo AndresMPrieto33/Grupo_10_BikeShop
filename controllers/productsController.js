@@ -97,7 +97,7 @@ const productsController = {
             description: req.body.description,
             stock: req.body.stock,
             brand: req.body.brand,
-            image: req.file.originalname,
+            image: req.file ? req.file.filename : '',
             product_detail: req.body.size,
             category: req.body.category,
             color: req.body.color
@@ -124,13 +124,13 @@ const productsController = {
         */
     },
     edit: (req, res) => {
-        const resutlValidation = validationResult(req);
+        /*const resutlValidation = validationResult(req);
         if (resutlValidation.errors.length > 0) {
-            return res.render('productCreate', {
+            return res.render('productEdit', {
                 errors: resutlValidation.mapped(),
                 oldData: req.body
             });
-        }
+        }*/
         db.Product.findByPk(req.params.id)
         .then(function (products) {
             res.render('productEdit', {products: products});
@@ -142,6 +142,14 @@ const productsController = {
         */
     },
     updated: (req, res) => {
+        const resutlValidation = validationResult(req);
+        if (resutlValidation.errors.length > 0) {
+            return res.render('productEdit', {
+                errors: resutlValidation.mapped(),
+                oldData: req.body
+            });
+        }
+
         db.Product.update({
             name: req.body.name,
             price: req.body.price,
@@ -160,7 +168,7 @@ const productsController = {
             }
         });
 
-        res.redirect('/products/productsAll');
+        res.redirect('/products/detail/' + req.params.id);
     },
 
 search: (req, res) => {

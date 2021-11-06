@@ -21,7 +21,8 @@ let upload = multer({ storage: storage });
 const productsController = require('../controllers/productsController');
 
 const validation = [
-   body('name').notEmpty().withMessage('El nombre del producto no puede estar vacio').bail().isLength({ min: 5 }).withMessage('El nombre debe tener al menos cinco caracteres'),
+   body('name').notEmpty().withMessage('El nombre del producto no puede estar vacio').bail()
+   .isLength({ min: 5 }).withMessage('El nombre debe tener al menos cinco caracteres'),
    body('description').isLength({min: 20}).withMessage('La descripcion del producto debe tener al menos 20 caracteres'),
    body('image').custom((value, { req }) => {
       let file = req.file;
