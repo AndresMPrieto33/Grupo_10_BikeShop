@@ -89,7 +89,7 @@ const productsController = {
             });
         }
 
-        let newProduct = req.body;
+        // let newProduct = req.body;
         db.Product.create({
             name: req.body.name,
             price: req.body.price,
@@ -153,7 +153,8 @@ const productsController = {
             product_detail: req.body.size,
             category: req.body.category,
             color: req.body.color
-        }, {
+        },
+        {
             where: {
                 id: req.params.id
             }

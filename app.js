@@ -29,9 +29,12 @@ app.use(express.json());
 const mainRouter = require('./routes/main');
 const userRouter = require('./routes/user');
 const productsRouter = require('./routes/products');
+const apiProductsRouter = require('./routes/api_routes/apiProductsRoute');
 
 app.use('/', mainRouter);
 app.use('/user', userRouter);
 app.use('/products', productsRouter);
+
+app.use('/api/products', apiProductsRouter);
 
 app.listen(3000, () => console.log('servidor corriendo en el puerto 3000'));
