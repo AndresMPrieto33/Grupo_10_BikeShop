@@ -18,5 +18,18 @@ module.exports = {
                 } )
                 .catch(error => res.json(error));
     },
-
+    detail: (req, res) => {
+        db.User 
+                .findByPk(req.params.id)
+                .then(user => {
+                    return res.status(200).json({
+                        meta:{
+                            status: 200,
+                            url: 'api/users/:id'
+                        },
+                        data: user
+                    });                    
+                })
+                .catch(error => res.json(error));
+    },
 }
