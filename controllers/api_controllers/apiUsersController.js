@@ -4,7 +4,7 @@ const Op = db.sequelize.Op;
 
 module.exports = {
     users: (req, res) =>{
-        User
+        db.User
                 .findAll()
                 .then(users => {
                     return res.status(200).json({
