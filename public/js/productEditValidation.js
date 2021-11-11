@@ -14,7 +14,7 @@ window.onload = function(){
         const errores = [];
         name.classList.add('error')
         
-        if(name.value = "" || name.value.length < 5){
+        if(name.value == "" || name.value.length < 5){
             errores.push('debe conter mas de 5 caracteres');
             name.classList.add('error')
             errorName.innerHTML = " mas de 5 caracters";
