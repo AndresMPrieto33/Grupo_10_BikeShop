@@ -9,24 +9,25 @@
         <!-- ## header ## -->
 
         <main class="register">
-
-            <form id="form" action="/products/edit/<%= products.id %> " method="POST" enctype="multipart/form-data">
-
+            <h2>EDICION DE PRODUCTOS</h2>
+            <form action="/products/edit/<%= products.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="register-form" id="form">
                 <div class="personal-info">
-                    <input type="text" id="name" name="name" value="<%= products.name %>" 
-                    class="form-control <%=locals.errors && errors.name ? 'is-invalid' : null %>"
-                    value="<%= locals.oldData ? oldData.name : null %>">
+                    <input type="text" id="name" name="name"  
+                    class="form-control" <%=locals.errors && errors.name ? 'is-invalid' : null %>
+
+                    value="<%= (locals.oldData ? oldData.name : products.name) %>">
                         <% if (locals.errors && errors.name) { %>
                             <div class="error-text" style="color: red;">
                                 <%= errors.name.msg %>
                             </div>
                             <% } %>
+                            <div class="errorName"></div>
                 </div>
 
 
                 <div class="personal-info">
-                    <input type="text" id="price" name="price" value="<%= products.price %>" class="form-control"
-                        <%=locals.errors && errors.price ? 'is-invalid' : null %>
+                    <input type="text" id="price" name="price" value="<%= products.price %>" 
+                    class="form-control" <%=locals.errors && errors.price ? 'is-invalid' : null %>
                     value="<%= locals.oldData ? oldData.price : null %>">
                         <% if (locals.errors && errors.price) { %>
                             <div class="error-text" style="color: red;">
@@ -94,12 +95,13 @@
                                 <%= errors.description.msg %>
                             </div>
                             <% } %>
+                            <div class="errorDescription error-text"></div>
                     </div>
                 
                 <div class="campo">
                     <div class="tag">
-                        <label for="description" class="form-label">Imagenes:</label>
-                        <input name="image" id="image" class="form-input" type="file"
+                        <label for="imagen" id="images" class="form-label">Imagenes:</label>
+                        <input name="image" id="images" class="form-input" type="file"
                             value="<%= products.image %>">
                     </div>
                     
@@ -110,6 +112,7 @@
                             <%= errors.image.msg %>
                         </div>
                         <% } %>
+                        <div class="errorAvatar error-text"></div>
                     </div>
                 </div>
                 

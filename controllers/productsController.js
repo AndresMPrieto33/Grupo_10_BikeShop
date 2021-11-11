@@ -142,12 +142,15 @@ const productsController = {
         */
     },
     updated: (req, res) => {
-        const resutlValidation = validationResult(req);
-        if (resutlValidation.errors.length > 0) {
-            return res.render('productEdit', {
-                errors: resutlValidation.mapped(),
+        let oldData = req.body.oldData;
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            if (oldData) {
+              return res.render('productEdit', {products: products},{
+                errors: resultValidation.mapped(),
                 oldData: req.body
-            });
+            });  
+            }
         }
 
         db.Product.update({
@@ -157,7 +160,7 @@ const productsController = {
             description: req.body.description,
             stock: req.body.stock,
             brand: req.body.brand,
-            image: req.file.originalname,
+            image: req.file ? req.file.filename : '',
             product_detail: req.body.size,
             category: req.body.category,
             color: req.body.color

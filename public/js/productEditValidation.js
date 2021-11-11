@@ -1,23 +1,26 @@
 window.onload = function(){
-    const form = document.querySelector('form.form');
+
+    const form = document.querySelector('#form');
     form.name.focus();
     
-    form.addEventListener("submit", (e) =>{
-        // e.preventDefault();
+    form.addEventListener("submit", (e) => {
+        //e.preventDefault();
 
         const name = document.querySelector('#name');
         const description = document.querySelector('#description');
+        
 
         const errorName = document.querySelector('.errorName');
         const errorDescription = document.querySelector('.errorDescription');
-
-        const errores = [];
-        name.classList.add('error')
+        const errorFile = document.querySelector('.errorFile');
         
-        if(name.value = "" || name.value.length < 5){
+
+        let errores = [];
+        
+        if(name.value == "" || name.value.length < 5){
             errores.push('debe conter mas de 5 caracteres');
-            name.classList.add('error')
-            errorName.innerHTML = " mas de 5 caracters";
+            name.classList.add('error');
+            errorName.innerHTML = "El nombre del producto debe tener mas de 5 caracters";
         }else{
             name.classList.add('ok')
             name.classList.remove('error')
@@ -26,13 +29,12 @@ window.onload = function(){
         if(description.value.length < 20 || description.value == ""){
             errores.push('debe tener al menos 20 caracteres');
             description.classList.add('error');
-            errorDescription.innerHTML = 'debe tener al menos 20 caracteres';
+            errorDescription.innerHTML = 'La descripcion del producto debe tener al menos 20 caracteres';
         }else{
             description.classList.add('ok');
             description.classList.remove('error');
             errorDescription.innerHTML = "";
         }
-
 
 
 
@@ -50,6 +52,8 @@ window.onload = function(){
                 errorFile.innerHTML = "";
             }
         }
+
+        console.log(errores);
 
         if(errores.length > 0){
             e.preventDefault();

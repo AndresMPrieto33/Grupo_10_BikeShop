@@ -34,7 +34,7 @@ const validation = [
          if (!acceptedExtentions.includes(fileExtention)) {
             throw new Error(`Las extenciones de arcivo permitidas son ${acceptedExtentions.join(', ')}`)
          }
-      } return true;
+      } 
    }),
 
 ];
