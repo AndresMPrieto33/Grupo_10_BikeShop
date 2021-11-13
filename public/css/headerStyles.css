@@ -188,7 +188,7 @@ section.banner img{
         text-align: center;
     }
     .mid-header .logo{
-        width: 100%;
+        width: 40%;
         flex-grow: 0.4;
         padding: 10px;
     }
@@ -211,6 +211,10 @@ section.banner img{
     }
     .mid-header .carrito p{
         display: none;
+    }
+
+    header .search-bar{
+        flex-grow: 0.3;
     }
     
     header .form{
@@ -248,6 +252,7 @@ section.banner img{
     header .mid-header .submit i{
         font-size: 0.8em;
     }
+    
 
     /*CSS BURGUER*/
     .display-menu{
