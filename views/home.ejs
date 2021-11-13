@@ -9,20 +9,20 @@
         <%- include('partials/header') %>
         <!-- ### HEADER ### -->
 
-        <h2>Ofertas</h2>
-        <% for( let i = 0; i < sale.length; i++ ) { %>
+        <!-- <h2>Ofertas</h2> -->
+        <% for( let i = 0; i < bikes.length; i++ ) { %>
         
             <div class="nov">
                 <section class="productos-novedades">
                     <div class="novedades">
-                        <a href="/products/detail/<%= sale[i].id  %>" class="novedadesA"><img src="img/products/<%= sale[i].image %>" alt="Imagen Bicicleta"></a>
+                        <a href="/products/detail/<%= bikes[i].id  %>" class="novedadesA"><img src="img/products/<%= sale[i].image %>" alt="Imagen Bicicleta"></a>
                         <div class="detalle">
-                            <div class="name"><h4><%= sale[i].name %></h4></div>
-                            <div class="description"><h4><%= sale[i].description %></h4></div>
-                            <div class="precio"><p><del> $<%= sale[i].price %></del></p></div>
+                            <div class="name"><h4><%= bikes[i].name %></h4></div>
+                            <div class="description"><h4><%= bikes[i].description %></h4></div>
+                            <div class="precio"><p><del> $<%= bikes[i].price %></del></p></div>
                             <div class="discount">
-                                <% let precioFinal = (sale[i].price) - ((sale[i].price * 10) / 100) %>
-                               <p> Descuento: $<%= (sale[i].price * 10) / 100 %></p>  
+                                <% let precioFinal = (bikes[i].price) - ((bikes[i].price * 10) / 100) %>
+                               <p> Descuento: $<%= (bikes[i].price * 10) / 100 %></p>  
                                 <b> <p> Precio final: $<%= precioFinal %></p></b>
                             </div>
                             <section class="boton-comprar-detalle">

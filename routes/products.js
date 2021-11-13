@@ -48,7 +48,7 @@ router.get('/parts', productsController.parts);
 router.get('/ruedas', productsController.ruedas);
 router.get('/ofertas', productsController.sale);
 router.get('/nuevo', validation, productsController.nuevo);
-router.post('/create', upload.single('image'), validation, productsController.create);
+router.post('/create',  upload.single('image'), validation, productsController.create);
 router.post('/delete/:id', productsController.delete);
 router.get('/edit/:id/', validation, productsController.edit);
 router.post('/edit/:id/', upload.single('image'), validation, productsController.updated);

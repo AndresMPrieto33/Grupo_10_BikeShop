@@ -10,7 +10,7 @@
                     <li><a href="/user/logout">logout</a></li> 
                     
                 <% } else { %>
-                    <li></i><a href="/user/register">Registrarse</a></li>
+                    <li><a href="/user/register">Registrarse</a></li>
                     <li><a href="/user/login">Ingresá</a></li>
                 <% } %>           
             </ul>
@@ -21,25 +21,19 @@
         <div class="logo">
             <a href="/"><img src="/img/bikeShop_002_2.png" alt= "Logo de MiBikeShop"></a>
         </div>
-            <div class="form">
+        <div class="search-bar">
                 <form action="/products/search" method="GET">
-                    
-                     
-                        <label for=""></label>
-                            
-                         <input type="search" name="name" id="" placeholder="Buscador Mi Bike Shop">   
-                         <div class="submit"> <i class="fa fa-search"></i>
-                        
-                    
-                    
+                        <input type="search" name="name" id="" class="search-input" placeholder="Buscador Mi Bike Shop">   
+                        <button type="submit" class="search-form-button"><i class="fas fa-search"></i></button>
                 </form>
-                </div>
-            </div>
-                <div class="carrito"><a href="/products/cart"><i class="fas fa-shopping-cart"></i><p>Carrito de compras</p></a></div>
+        </div>
+        <div class="carrito"><a href="/products/cart"><i class="fas fa-shopping-cart"></i><p>Carrito de compras</p></a>
+        </div>
     </div>
-<section class="banner"> 
-    <img src="/img/banner1.jpg" alt="Banner de ofertas">
-</section>
+    <section class="banner"> 
+        <img src="/img/banner1.jpg" alt="Banner de ofertas">
+    </section>
+
 <div class="display-menu">
     <div class="burguer-menu">
         <i class="fas fa-bars"></i>

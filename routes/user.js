@@ -7,6 +7,7 @@ const { body } = require('express-validator');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
+
 const User = require('../models/User');
 const db = require('../database/models');
 const sequelize = db.sequelize;

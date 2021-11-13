@@ -3,12 +3,15 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-body{
+body {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    background-color: #e0e0e0
+}
+/* body{
     background-color: #e0e0e0;
     font-family: 'Roboto', 'sans-serif';
 
-}
+} */
 
 .profile{
     text-align: right;

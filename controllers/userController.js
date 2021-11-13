@@ -113,7 +113,7 @@ const userController = {
             email: req.body.email,
             password: bcryptjs.hashSync(req.body.password, 10),
             avatar:  req.file ? req.file.filename : '',
-            user_rol_id: 2,
+            user_rol_id: 1,
             address: req.body.address,
             number: req.body.number,
             city: req.body.city,
