@@ -3,33 +3,59 @@ const {products: Product} = db;
 
 module.exports = {
     products: (req, res) => {
-        db.Product 
+
+        db.Product
                 .findAll()
-                .then(products => {
-                    return res.status(200).json({
+                .then(productos =>{
+                    let product = [];
+                    productos.forEach(element => {
+                        let producto = {
+                            id: element.id,
+                            name: element.name,
+                            brand: element.brand,
+                            price: element.price,
+                            discount: element.discount,
+                            description: element.description,
+                            stock: element.stock,
+                            image: 'http://localhost:3001/images/products/'+ element.image
+                        }
+                        product.push(producto)
+                    });
+                    return res.json({
                         meta:{
                             status: 200,
-                            totalResults: products.length,
-                            url: 'api/products/'
+                            totalResults: product.length,
+                            url: 'http://localhost:3001/api/products/'
                         },
-                        data: products
-                    });                    
+                        data: product                        
+                    })
                 })
-                .catch(error => res.json(error));
     },
-    detail: (req, res) => {
+    'detail': (req, res) => {
         db.Product 
                 .findByPk(req.params.id)
-                .then(products => {
-                    return res.status(200).json({
-                        meta:{
-                            status: 200,
-                            url: 'api/products/:id'
-                        },
-                        data: products
-                    });                    
+                .then(elemento =>{    
+                        let producto = {
+                            id: elemento.id,
+                            name: elemento.name,
+                            brand: elemento.brand,
+                            price: elemento.price,
+                            discount: elemento.discount,
+                            description: elemento.description,
+                            stock:  elemento.stock,
+                            image: 'http://localhost:3001/images/products/'+ elemento.image
+                        }                        
+                        return res.status(200).json({
+                            meta:{
+                                status: 200,    
+                                url: 'http://localhost:3001/api/products/:id'
+                            },
+                            data: producto                      
+                    });
+                    
                 })
                 .catch(error => res.json(error));
+
     },
     bikes: (req, res) =>{
         db.Product
