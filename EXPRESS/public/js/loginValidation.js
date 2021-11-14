@@ -19,15 +19,15 @@ window.onload = function(){
             email.classList.remove('error');
             errorEmail.innerHTML = ""
         }else{
-            errores.push('debes ingresar un tipo de email valido');
-            errorEmail.innerHTML = 'debes ingresar un tipo de email valido';
+            errores.push('Debes ingresar un tipo de email valido');
+            errorEmail.innerHTML = 'Debes ingresar un tipo de email valido';
             email.classList.add('error');
             console.log(errores);
         }
         if(password.value == "" || password.value.length < 8){
-            errores.push('debe tener al menos 8 caracteres');
+            errores.push('La contraseña debe tener al menos 8 caracteres');
             password.classList.add('error');
-            errorPassword.innerHTML = 'debe tener al menos 8 caracteres';
+            errorPassword.innerHTML = 'contraseña debe tener al menos 8 caracteres';
         }else{
             password.classList.add('ok');
             password.classList.remove('error');
