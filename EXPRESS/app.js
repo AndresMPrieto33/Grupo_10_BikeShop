@@ -1,12 +1,14 @@
 const express = require('express');
 const session = require('express-session');
 const cookies = require('cookie-parser');
-
+const cors = require('cors');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 const app = express();
 const path = require('path');
 const publicPath = path.resolve(__dirname, 'public');
+
+app.use(cors());
 
 app.use(express.static(publicPath));
 app.set('views', path.resolve(__dirname, 'views'));  
