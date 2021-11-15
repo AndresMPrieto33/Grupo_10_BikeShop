@@ -55,6 +55,7 @@ body {
 }
 
 .boton-comprar-detalle button{
+    color: white;
     padding: 5px;
     background-color: rgb(45, 45, 124); 
     border-radius: 4px;

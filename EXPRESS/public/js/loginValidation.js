@@ -27,7 +27,7 @@ window.onload = function(){
         if(password.value == "" || password.value.length < 8){
             errores.push('La contraseña debe tener al menos 8 caracteres');
             password.classList.add('error');
-            errorPassword.innerHTML = 'contraseña debe tener al menos 8 caracteres';
+            errorPassword.innerHTML = 'La contraseña debe tener al menos 8 caracteres';
         }else{
             password.classList.add('ok');
             password.classList.remove('error');

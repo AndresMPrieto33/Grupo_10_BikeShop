@@ -24,9 +24,12 @@
                 <div class="boton-comprar-detalle">
                         <button><a href="/products/edit/<%= products.id %> ">Editar producto</a></button>
                 </div>
-
+                
                 <form action="/products/delete/<%= products.id %>" method="POST" style="display: inline-flex">
-                        <button type="submit" class="action-button delete">ELIMINAR</button>
+                        <div class="boton-comprar-detalle">
+                           <button type="submit">Eliminar</button>     
+                        </div>
+                        
                 </form>
                 </div>
         </section>

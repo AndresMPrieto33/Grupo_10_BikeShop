@@ -57,33 +57,33 @@ window.onload = function(){
             email.classList.remove('error');
             errorEmail.innerHTML = ""
         }else{
-            errores.push('debes ingresar un tipo de email valido');
-            errorEmail.innerHTML = 'debes ingresar un tipo de email valido';
+            errores.push('Debes ingresar un tipo de email valido');
+            errorEmail.innerHTML = 'Debes ingresar un tipo de email valido';
             email.classList.add('error');
             console.log(errores);
         }
         if(password.value == "" ||password.value.length < 8){
-            errores.push('debe tener al menos 8 caracteres');
+            errores.push('La contraseña debe tener al menos 8 caracteres');
             password.classList.add('error');
-            errorPassword.innerHTML = 'debe tener al menos 8 caracteres';
+            errorPassword.innerHTML = 'La contraseña debe tener al menos 8 caracteres';
         }else{
             password.classList.add('ok');
             password.classList.remove('error');
             errorPassword.innerHTML = "";
         }
         if(city.value == "" || city.value.length < 3){
-            errores.push('debe contener al menos 3 caracteres');
+            errores.push('La ciudad debe contener al menos 3 caracteres');
             city.classList.add('error');
-            errorCity.innerHTML = 'debe contener al menos 3 caracteres';
+            errorCity.innerHTML = 'La ciudad debe contener al menos 3 caracteres';
         }else{
             city.classList.add('ok');
             city.classList.remove('error');
             errorCity.innerHTML = "";
         }
         if(address.value.length < 3 || address.value == ""){
-            errores.push('debe contener al menos 3 caracteres');
+            errores.push('La direccion debe contener al menos 3 caracteres');
             address.classList.add('error');
-            errorAddress.innerHTML = 'debe contener al menos 3 caracteres';
+            errorAddress.innerHTML = 'La direccion debe contener al menos 3 caracteres';
         }else{
             address.classList.add('ok');
             address.classList.remove('error');
@@ -94,16 +94,16 @@ window.onload = function(){
             number.classList.remove('error');
             errorNumber.innerHTML = "correcto";
         }else{
-            errores.push('debes ingresar un numero');
-            errorNumber.innerHTML = 'debes ingresar un numero';
+            errores.push('Debes ingresar un numero');
+            errorNumber.innerHTML = 'Debes ingresar un numero';
             number.classList.add('error');
             console.log(errores);
         }
 
         if(postalCode.value.length < 3 || postalCode.value == ""){
-            errores.push('debe contener al menos 3 caracteres');
+            errores.push('El codigo postal debe contener al menos 3 caracteres');
             postalCode.classList.add('error');
-            errorPostalCode.innerHTML = 'debe contener al menos 3 caracteres';
+            errorPostalCode.innerHTML = 'El codigo postal debe contener al menos 3 caracteres';
             console.log(errores);
         }else{
             postalCode.classList.add('ok');
