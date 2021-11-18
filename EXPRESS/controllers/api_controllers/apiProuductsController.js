@@ -69,7 +69,7 @@ module.exports = {
                         meta:{
                             status: 200,
                             totalProducts: products.length,
-                            url: 'api/products/bikes'
+                            url: 'http://localhost:3001/api/products/bikes'
                         },
                         data: products
                     })
@@ -87,7 +87,7 @@ module.exports = {
                         meta: {
                             status: 200,
                             totalProducts: products.length,
-                            url: 'api/products/accesorios'
+                            url: 'http://localhost:3001/api/products/accesorios'
                         },
                         data: products
                     })
@@ -105,7 +105,7 @@ module.exports = {
                         meta: {
                             status: 200,
                             totalProducts: products.length,
-                            url: 'api/products/parts'
+                            url: 'http://localhost:3001/api/products/parts'
                         },
                         data: products
                     })
@@ -123,7 +123,7 @@ module.exports = {
                         meta: {
                             status: 200,
                             totalProducts: products.length,
-                            url: 'api/products/ruedas'
+                            url: 'http://localhost:3001/api/products/ruedas'
                         },
                         data: products
                     })
